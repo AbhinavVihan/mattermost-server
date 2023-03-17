@@ -2,7 +2,6 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 
 import {Team, TeamMembership} from '@mattermost/types/teams';
 import {UserProfile} from '@mattermost/types/users';
@@ -10,6 +9,9 @@ import {UserProfile} from '@mattermost/types/users';
 import {TestHelper} from '../../../../../../utils/test_helper';
 
 import TeamMembers from './team_members';
+import {Provider} from 'react-redux';
+import store from 'stores/redux_store';
+import {renderWithIntl} from 'tests/react_testing_utils';
 
 describe('admin_console/team_channel_settings/team/TeamMembers', () => {
     const user1: UserProfile = Object.assign(TestHelper.getUserMock({id: 'user-1'}));
@@ -52,21 +54,26 @@ describe('admin_console/team_channel_settings/team/TeamMembers', () => {
     };
 
     test('should match snapshot', () => {
-        const wrapper = shallow(
-            <TeamMembers {...baseProps}/>,
+        const wrapper = renderWithIntl(
+            <Provider store={store}>
+                <TeamMembers {...baseProps}/>
+            </Provider>,
         );
         expect(wrapper).toMatchSnapshot();
     });
 
     test('should match snapshot loading no users', () => {
-        const wrapper = shallow(
-            <TeamMembers
-                {...baseProps}
-                users={[]}
-                teamMembers={{}}
-                totalCount={0}
-                loading={true}
-            />,
+        const wrapper = renderWithIntl(
+            <Provider store={store}>
+                <TeamMembers
+                    {...baseProps}
+                    users={[]}
+                    teamMembers={{}}
+                    totalCount={0}
+                    loading={true}
+                />
+            </Provider>,
+
         );
         expect(wrapper).toMatchSnapshot();
     });

@@ -1,39 +1,448 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`admin_console/team_channel_settings/team/TeamSettings should match snapshot 1`] = `
-<div
-  className="wrapper--fixed"
->
-  <div
-    className="admin-console__header"
-  >
-    <MemoizedFormattedMessage
-      defaultMessage="{siteName} Teams"
-      id="admin.team_settings.groupsPageTitle"
-      values={
-        Object {
-          "siteName": "site",
-        }
-      }
-    />
-  </div>
-  <div
-    className="admin-console__wrapper"
-  >
-    <div
-      className="admin-console__content"
-    >
-      <AdminPanel
-        className=""
-        id="teams"
-        subtitleDefault="Manage team settings."
-        subtitleId="admin.team_settings.description"
-        titleDefault="Teams"
-        titleId="admin.team_settings.title"
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="wrapper--fixed"
       >
-        <Connect(TeamList) />
-      </AdminPanel>
+        <div
+          class="admin-console__header"
+        >
+          site Teams
+        </div>
+        <div
+          class="admin-console__wrapper"
+        >
+          <div
+            class="admin-console__content"
+          >
+            <div
+              class="AdminPanel clearfix "
+              id="teams"
+            >
+              <div
+                class="header"
+              >
+                <div>
+                  <h3>
+                    Teams
+                  </h3>
+                  <div
+                    class="mt-2"
+                  >
+                    Manage team settings.
+                  </div>
+                </div>
+              </div>
+              <div
+                class="TeamsList"
+              >
+                <div
+                  class="DataGrid"
+                >
+                  <div
+                    class="DataGrid_search"
+                  >
+                    <div
+                      class="DataGrid_searchBar"
+                    >
+                      <span
+                        aria-hidden="true"
+                        class="DataGrid_searchIcon"
+                      >
+                        <i
+                          class="fa fa-search"
+                          title="Search Icon"
+                        />
+                      </span>
+                      <input
+                        data-testid="searchInput"
+                        placeholder="Search"
+                        type="text"
+                        value=""
+                      />
+                      <i
+                        class="DataGrid_clearButton fa fa-times-circle hidden"
+                        data-testid="clear-search"
+                      />
+                    </div>
+                    <div
+                      class="Filter"
+                    >
+                      <button
+                        class="Filter_button"
+                        type="button"
+                      >
+                        <i
+                          class="Icon icon-filter-variant"
+                        />
+                        Filters
+                      </button>
+                      <div
+                        class="Filter_content"
+                      >
+                        <div
+                          class="Filter_header"
+                        >
+                          <div
+                            class="Filter_title"
+                          >
+                            Filter by
+                          </div>
+                          <a
+                            class="Filter_reset"
+                          >
+                            Reset filters
+                          </a>
+                        </div>
+                        <hr />
+                        <div
+                          class="Filter_lists"
+                        >
+                          <div
+                            class="FilterList"
+                          >
+                            <div
+                              class="FilterList_name"
+                            >
+                              Management
+                            </div>
+                            <div
+                              class="FilterList_item"
+                            >
+                              <div
+                                class="FilterList_checkbox"
+                              >
+                                <label>
+                                  <input
+                                    id="allow_open_invite"
+                                    name="allow_open_invite"
+                                    type="checkbox"
+                                  />
+                                  Anyone Can Join
+                                </label>
+                              </div>
+                            </div>
+                            <div
+                              class="FilterList_item"
+                            >
+                              <div
+                                class="FilterList_checkbox"
+                              >
+                                <label>
+                                  <input
+                                    id="invite_only"
+                                    name="invite_only"
+                                    type="checkbox"
+                                  />
+                                  Invite Only
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button
+                          class="Filter_apply style--none btn btn-primary"
+                          disabled=""
+                          type="button"
+                        >
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="DataGrid_header"
+                  >
+                    <div
+                      class="DataGrid_cell"
+                      style="flex-grow: 4;"
+                    >
+                      Name
+                    </div>
+                    <div
+                      class="DataGrid_cell"
+                    >
+                      Management
+                    </div>
+                    <div
+                      class="DataGrid_cell"
+                    />
+                  </div>
+                  <div
+                    class="DataGrid_rows"
+                    style="min-height: 0px;"
+                  >
+                    <div
+                      class="DataGrid_loading"
+                    >
+                      <span
+                        class="LoadingSpinner"
+                        id="loadingSpinner"
+                      >
+                        <span
+                          class="fa fa-spinner fa-fw fa-pulse spinner"
+                          title="Loading Icon"
+                        />
+                      </span>
+                      Loading
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  </body>,
+  "container": <div>
+    <div
+      class="wrapper--fixed"
+    >
+      <div
+        class="admin-console__header"
+      >
+        site Teams
+      </div>
+      <div
+        class="admin-console__wrapper"
+      >
+        <div
+          class="admin-console__content"
+        >
+          <div
+            class="AdminPanel clearfix "
+            id="teams"
+          >
+            <div
+              class="header"
+            >
+              <div>
+                <h3>
+                  Teams
+                </h3>
+                <div
+                  class="mt-2"
+                >
+                  Manage team settings.
+                </div>
+              </div>
+            </div>
+            <div
+              class="TeamsList"
+            >
+              <div
+                class="DataGrid"
+              >
+                <div
+                  class="DataGrid_search"
+                >
+                  <div
+                    class="DataGrid_searchBar"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="DataGrid_searchIcon"
+                    >
+                      <i
+                        class="fa fa-search"
+                        title="Search Icon"
+                      />
+                    </span>
+                    <input
+                      data-testid="searchInput"
+                      placeholder="Search"
+                      type="text"
+                      value=""
+                    />
+                    <i
+                      class="DataGrid_clearButton fa fa-times-circle hidden"
+                      data-testid="clear-search"
+                    />
+                  </div>
+                  <div
+                    class="Filter"
+                  >
+                    <button
+                      class="Filter_button"
+                      type="button"
+                    >
+                      <i
+                        class="Icon icon-filter-variant"
+                      />
+                      Filters
+                    </button>
+                    <div
+                      class="Filter_content"
+                    >
+                      <div
+                        class="Filter_header"
+                      >
+                        <div
+                          class="Filter_title"
+                        >
+                          Filter by
+                        </div>
+                        <a
+                          class="Filter_reset"
+                        >
+                          Reset filters
+                        </a>
+                      </div>
+                      <hr />
+                      <div
+                        class="Filter_lists"
+                      >
+                        <div
+                          class="FilterList"
+                        >
+                          <div
+                            class="FilterList_name"
+                          >
+                            Management
+                          </div>
+                          <div
+                            class="FilterList_item"
+                          >
+                            <div
+                              class="FilterList_checkbox"
+                            >
+                              <label>
+                                <input
+                                  id="allow_open_invite"
+                                  name="allow_open_invite"
+                                  type="checkbox"
+                                />
+                                Anyone Can Join
+                              </label>
+                            </div>
+                          </div>
+                          <div
+                            class="FilterList_item"
+                          >
+                            <div
+                              class="FilterList_checkbox"
+                            >
+                              <label>
+                                <input
+                                  id="invite_only"
+                                  name="invite_only"
+                                  type="checkbox"
+                                />
+                                Invite Only
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        class="Filter_apply style--none btn btn-primary"
+                        disabled=""
+                        type="button"
+                      >
+                        Apply
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="DataGrid_header"
+                >
+                  <div
+                    class="DataGrid_cell"
+                    style="flex-grow: 4;"
+                  >
+                    Name
+                  </div>
+                  <div
+                    class="DataGrid_cell"
+                  >
+                    Management
+                  </div>
+                  <div
+                    class="DataGrid_cell"
+                  />
+                </div>
+                <div
+                  class="DataGrid_rows"
+                  style="min-height: 0px;"
+                >
+                  <div
+                    class="DataGrid_loading"
+                  >
+                    <span
+                      class="LoadingSpinner"
+                      id="loadingSpinner"
+                    >
+                      <span
+                        class="fa fa-spinner fa-fw fa-pulse spinner"
+                        title="Loading Icon"
+                      />
+                    </span>
+                    Loading
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

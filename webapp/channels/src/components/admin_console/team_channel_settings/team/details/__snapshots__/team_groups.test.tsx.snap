@@ -1,119 +1,266 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`admin_console/team_channel_settings/team/TeamGroups should match snapshot 1`] = `
-<AdminPanel
-  button={
-    <Memo(Connect(ToggleModalButton))
-      className="btn btn-primary"
-      dialogProps={
-        Object {
-          "excludeGroups": Array [
-            Object {
-              "allow_reference": true,
-              "create_at": 1,
-              "delete_at": 0,
-              "description": "",
-              "display_name": "DN",
-              "has_syncables": false,
-              "id": "123",
-              "member_count": 3,
-              "name": "group_name",
-              "remote_id": "",
-              "scheme_admin": false,
-              "source": "",
-              "update_at": 1,
-            },
-          ],
-          "includeGroups": Array [],
-          "onAddCallback": [MockFunction],
-          "skipCommit": true,
-          "team": Object {
-            "allow_open_invite": false,
-            "allowed_domains": "",
-            "company_name": "",
-            "create_at": 0,
-            "delete_at": 0,
-            "description": "",
-            "display_name": "team",
-            "email": "",
-            "group_constrained": false,
-            "id": "123",
-            "invite_id": "",
-            "name": "DN",
-            "scheme_id": "id",
-            "type": "O",
-            "update_at": 0,
-          },
-        }
-      }
-      dialogType={
-        Object {
-          "$$typeof": Symbol(react.memo),
-          "WrappedComponent": [Function],
-          "compare": null,
-          "type": [Function],
-        }
-      }
-      id="addGroupsToTeamToggle"
-      modalId="add_groups_to_team"
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="AdminPanel clearfix "
+        id="team_groups"
+      >
+        <div
+          class="header"
+        >
+          <div>
+            <h3>
+              Synced Groups
+            </h3>
+            <div
+              class="mt-2"
+            >
+              Add and remove team members based on their group membership.
+            </div>
+          </div>
+          <div
+            class="button"
+          >
+            <button
+              class="style--none btn btn-primary"
+              id="addGroupsToTeamToggle"
+            >
+              Add Group
+            </button>
+          </div>
+        </div>
+        <div
+          class="groups-list groups-list-no-padding"
+        >
+          <div
+            class="groups-list--header"
+          >
+            <div
+              class="group-name group-name-adjusted"
+            >
+              Group Name
+            </div>
+            <div
+              class="group-content"
+            >
+              <div
+                class="group-description group-description-adjusted"
+              >
+                Member Count
+              </div>
+              <div
+                class="group-description group-description-adjusted"
+              >
+                Roles
+              </div>
+              <div
+                class="group-actions"
+              />
+            </div>
+          </div>
+          <div
+            class="groups-list--body"
+            id="groups-list--body"
+          >
+            <div
+              class="groups-list-loading"
+            >
+              <i
+                class="fa fa-spinner fa-pulse fa-2x"
+              />
+            </div>
+          </div>
+          <div
+            class="groups-list--footer"
+          >
+            <div
+              class="counter"
+            >
+              1 - 1 of 1
+            </div>
+            <button
+              class="btn btn-link prev disabled"
+              disabled=""
+              type="button"
+            >
+              <i
+                class="fa fa-1x fa-angle-left"
+                title="Previous Icon"
+              />
+            </button>
+            <button
+              class="btn btn-link next disabled"
+              data-testid="page-link-next"
+              disabled=""
+              type="button"
+            >
+              <i
+                class="fa fa-1x fa-angle-right"
+                title="Next Icon"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="AdminPanel clearfix "
+      id="team_groups"
     >
-      <Memo(MemoizedFormattedMessage)
-        defaultMessage="Add Group"
-        id="admin.team_settings.team_details.add_group"
-      />
-    </Memo(Connect(ToggleModalButton))>
-  }
-  className=""
-  id="team_groups"
-  subtitleDefault="Add and remove team members based on their group membership."
-  subtitleId="admin.team_settings.team_detail.syncedGroupsDescription"
-  titleDefault="Synced Groups"
-  titleId="admin.team_settings.team_detail.syncedGroupsTitle"
->
-  <Connect(GroupList)
-    groups={
-      Array [
-        Object {
-          "allow_reference": true,
-          "create_at": 1,
-          "delete_at": 0,
-          "description": "",
-          "display_name": "DN",
-          "has_syncables": false,
-          "id": "123",
-          "member_count": 3,
-          "name": "group_name",
-          "remote_id": "",
-          "scheme_admin": false,
-          "source": "",
-          "update_at": 1,
-        },
-      ]
-    }
-    isModeSync={true}
-    onGroupRemoved={[MockFunction]}
-    setNewGroupRole={[MockFunction]}
-    team={
-      Object {
-        "allow_open_invite": false,
-        "allowed_domains": "",
-        "company_name": "",
-        "create_at": 0,
-        "delete_at": 0,
-        "description": "",
-        "display_name": "team",
-        "email": "",
-        "group_constrained": false,
-        "id": "123",
-        "invite_id": "",
-        "name": "DN",
-        "scheme_id": "id",
-        "type": "O",
-        "update_at": 0,
-      }
-    }
-    totalGroups={1}
-    type="team"
-  />
-</AdminPanel>
+      <div
+        class="header"
+      >
+        <div>
+          <h3>
+            Synced Groups
+          </h3>
+          <div
+            class="mt-2"
+          >
+            Add and remove team members based on their group membership.
+          </div>
+        </div>
+        <div
+          class="button"
+        >
+          <button
+            class="style--none btn btn-primary"
+            id="addGroupsToTeamToggle"
+          >
+            Add Group
+          </button>
+        </div>
+      </div>
+      <div
+        class="groups-list groups-list-no-padding"
+      >
+        <div
+          class="groups-list--header"
+        >
+          <div
+            class="group-name group-name-adjusted"
+          >
+            Group Name
+          </div>
+          <div
+            class="group-content"
+          >
+            <div
+              class="group-description group-description-adjusted"
+            >
+              Member Count
+            </div>
+            <div
+              class="group-description group-description-adjusted"
+            >
+              Roles
+            </div>
+            <div
+              class="group-actions"
+            />
+          </div>
+        </div>
+        <div
+          class="groups-list--body"
+          id="groups-list--body"
+        >
+          <div
+            class="groups-list-loading"
+          >
+            <i
+              class="fa fa-spinner fa-pulse fa-2x"
+            />
+          </div>
+        </div>
+        <div
+          class="groups-list--footer"
+        >
+          <div
+            class="counter"
+          >
+            1 - 1 of 1
+          </div>
+          <button
+            class="btn btn-link prev disabled"
+            disabled=""
+            type="button"
+          >
+            <i
+              class="fa fa-1x fa-angle-left"
+              title="Previous Icon"
+            />
+          </button>
+          <button
+            class="btn btn-link next disabled"
+            data-testid="page-link-next"
+            disabled=""
+            type="button"
+          >
+            <i
+              class="fa fa-1x fa-angle-right"
+              title="Next Icon"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

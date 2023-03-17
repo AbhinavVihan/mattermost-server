@@ -2,22 +2,20 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 
 import * as useOpenPricingModal from 'components/common/hooks/useOpenPricingModal';
 
 import AtPlanMention from './index';
+import {renderWithIntl} from 'tests/react_testing_utils';
+import {fireEvent, screen} from '@testing-library/react';
 
 describe('components/AtPlanMention', () => {
     it('should open pricing modal when plan mentioned is trial', () => {
         const openPricingModal = jest.fn();
         jest.spyOn(useOpenPricingModal, 'default').mockImplementation(() => openPricingModal);
 
-        const wrapper = shallow(<AtPlanMention plan='Enterprise trial'/>);
-        wrapper.find('a').simulate('click', {
-            preventDefault: () => {
-            },
-        });
+        renderWithIntl(<AtPlanMention plan='Enterprise trial'/>);
+        fireEvent.click(screen.getByTestId('at_plan_mention'));
 
         expect(openPricingModal).toHaveBeenCalledTimes(1);
     });
@@ -26,11 +24,8 @@ describe('components/AtPlanMention', () => {
         const openPricingModal = jest.fn();
         jest.spyOn(useOpenPricingModal, 'default').mockImplementation(() => openPricingModal);
 
-        const wrapper = shallow(<AtPlanMention plan='Enterprise plan'/>);
-        wrapper.find('a').simulate('click', {
-            preventDefault: () => {
-            },
-        });
+        renderWithIntl(<AtPlanMention plan='Enterprise plan'/>);
+        fireEvent.click(screen.getByTestId('at_plan_mention'));
 
         expect(openPricingModal).toHaveBeenCalledTimes(1);
     });
@@ -39,11 +34,8 @@ describe('components/AtPlanMention', () => {
         const openPricingModal = jest.fn();
         jest.spyOn(useOpenPricingModal, 'default').mockImplementation(() => openPricingModal);
 
-        const wrapper = shallow(<AtPlanMention plan='Professional plan'/>);
-        wrapper.find('a').simulate('click', {
-            preventDefault: () => {
-            },
-        });
+        renderWithIntl(<AtPlanMention plan='Professional plan'/>);
+        fireEvent.click(screen.getByTestId('at_plan_mention'));
 
         expect(openPricingModal).toHaveBeenCalledTimes(1);
     });

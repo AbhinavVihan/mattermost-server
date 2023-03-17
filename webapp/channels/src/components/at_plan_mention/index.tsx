@@ -20,6 +20,7 @@ function AtPlanMention(props: Props) {
         <a
             id='at_plan_mention'
             onClick={handleClick}
+            data-testid='at_plan_mention'
         >
             {props.plan}
         </a>
