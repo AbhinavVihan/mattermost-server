@@ -1,234 +1,506 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/PluginManagement should match snapshot 1`] = `
-<div
-  className="wrapper--fixed DataRetentionSettings"
->
-  <div
-    className="admin-console__header with-back"
-  >
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
     <div>
-      <Connect(BlockableLink)
-        className="fa fa-angle-left back"
-        to="/admin_console/compliance/data_retention_settings"
-      />
-      <MemoizedFormattedMessage
-        defaultMessage="Global Retention Policy"
-        id="admin.data_retention.globalPolicyTitle"
-      />
-    </div>
-  </div>
-  <div
-    className="admin-console__wrapper"
-  >
-    <div
-      className="admin-console__content"
-    >
-      <Card
-        className="console"
-        expanded={true}
+      <div
+        class="wrapper--fixed DataRetentionSettings"
       >
-        <CardBody>
+        <div
+          class="admin-console__header with-back"
+        >
+          <div>
+            <a
+              class="fa fa-angle-left back"
+              href="/admin_console/compliance/data_retention_settings"
+            />
+            Global Retention Policy
+          </div>
+        </div>
+        <div
+          class="admin-console__wrapper"
+        >
           <div
-            className="global_policy"
+            class="admin-console__content"
           >
-            <p>
-              Applies to all teams and channels, but does not apply to custom retention policies.
-            </p>
             <div
-              id="global_direct_message_dropdown"
+              class="Card console expanded"
             >
-              <DropdownInputHybrid
-                defaultValue={
-                  Object {
-                    "label": <div>
-                      <i
-                        className="icon icon-infinity option-icon"
-                      />
-                      <span
-                        className="option_forever"
-                      >
-                        Keep forever
-                      </span>
-                    </div>,
-                    "value": "FOREVER",
-                  }
-                }
-                dropdownClassNamePrefix="channel_message_retention_dropdown"
-                exceptionToInput={
-                  Array [
-                    "FOREVER",
-                  ]
-                }
-                inputId="channel_message_retention_input"
-                inputType="number"
-                inputValue="60"
-                legend="Channel & direct message retention"
-                name="channel_message_retention"
-                onDropdownChange={[Function]}
-                onInputChange={[Function]}
-                options={
-                  Array [
-                    Object {
-                      "label": <span
-                        className="option_days"
-                      >
-                        Days
-                      </span>,
-                      "value": "DAYS",
-                    },
-                    Object {
-                      "label": <span
-                        className="option_years"
-                      >
-                        Years
-                      </span>,
-                      "value": "YEARS",
-                    },
-                    Object {
-                      "label": <div>
-                        <i
-                          className="icon icon-infinity option-icon"
-                        />
-                        <span
-                          className="option_forever"
-                        >
-                          Keep forever
-                        </span>
-                      </div>,
-                      "value": "FOREVER",
-                    },
-                  ]
-                }
-                placeholder="Channel & direct message retention"
-                value={
-                  Object {
-                    "label": <span
-                      className="option_days"
+              <div
+                class="Card__body expanded expanding"
+                style="height: 0px;"
+              >
+                <div
+                  class="global_policy"
+                >
+                  <p>
+                    Applies to all teams and channels, but does not apply to custom retention policies.
+                  </p>
+                  <div
+                    id="global_direct_message_dropdown"
+                  >
+                    <div
+                      class="DropdownInput hybrid_container"
+                      style="width: 100%;"
                     >
-                      Days
-                    </span>,
-                    "value": "DAYS",
-                  }
-                }
-                width={90}
-              />
-            </div>
-            <div
-              id="global_file_dropdown"
-            >
-              <DropdownInputHybrid
-                defaultValue={
-                  Object {
-                    "label": <div>
-                      <i
-                        className="icon icon-infinity option-icon"
-                      />
-                      <span
-                        className="option_forever"
+                      <fieldset
+                        class="Input_fieldset Input_fieldset___legend Input_fieldset___split"
                       >
-                        Keep forever
-                      </span>
-                    </div>,
-                    "value": "FOREVER",
-                  }
-                }
-                dropdownClassNamePrefix="file_retention_dropdown"
-                exceptionToInput={
-                  Array [
-                    "FOREVER",
-                  ]
-                }
-                inputId="file_retention_input"
-                inputType="number"
-                inputValue="40"
-                legend="File retention"
-                name="file_retention"
-                onDropdownChange={[Function]}
-                onInputChange={[Function]}
-                options={
-                  Array [
-                    Object {
-                      "label": <span
-                        className="option_days"
-                      >
-                        Days
-                      </span>,
-                      "value": "DAYS",
-                    },
-                    Object {
-                      "label": <span
-                        className="option_years"
-                      >
-                        Years
-                      </span>,
-                      "value": "YEARS",
-                    },
-                    Object {
-                      "label": <div>
-                        <i
-                          className="icon icon-infinity option-icon"
-                        />
-                        <span
-                          className="option_forever"
+                        <legend
+                          class="Input_legend Input_legend___focus"
                         >
-                          Keep forever
-                        </span>
-                      </div>,
-                      "value": "FOREVER",
-                    },
-                  ]
-                }
-                placeholder="File retention"
-                value={
-                  Object {
-                    "label": <span
-                      className="option_days"
+                          Channel & direct message retention
+                        </legend>
+                        <div
+                          class="Input_wrapper input_hybrid_wrapper showInput"
+                          style="max-width: 10000px;"
+                        >
+                          <input
+                            class="Input form-control"
+                            id="channel_message_retention_input"
+                            name="Input_channel_message_retention"
+                            placeholder="Channel & direct message retention"
+                            type="number"
+                            value="60"
+                          />
+                        </div>
+                        <div
+                          class="Input_wrapper dropdown_hybrid_wrapper"
+                          style="width: 90px;"
+                        >
+                          <div
+                            class="Input Input__focus css-2b097c-container"
+                            id="DropdownInput_channel_message_retention"
+                          >
+                            <div
+                              class="DropdownInput__controlContainer"
+                            >
+                              <div
+                                class="channel_message_retention_dropdown__control css-1nr98fh-control"
+                              >
+                                <div
+                                  class="channel_message_retention_dropdown__value-container channel_message_retention_dropdown__value-container--has-value css-1hwfws3"
+                                >
+                                  <div
+                                    class="channel_message_retention_dropdown__single-value css-1uccc91-singleValue"
+                                  >
+                                    <span
+                                      class="option_days"
+                                    >
+                                      Days
+                                    </span>
+                                  </div>
+                                  <input
+                                    class="css-62g3xt-dummyInput"
+                                    id="react-select-2-input"
+                                    readonly=""
+                                    tabindex="0"
+                                    value=""
+                                  />
+                                </div>
+                                <div
+                                  class="DropdownInput__indicatorsContainer"
+                                >
+                                  <div
+                                    class="channel_message_retention_dropdown__indicators css-1hb7zxy-IndicatorsContainer"
+                                  >
+                                    <i
+                                      class="icon icon-chevron-down"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+                  <div
+                    id="global_file_dropdown"
+                  >
+                    <div
+                      class="DropdownInput hybrid_container"
+                      style="width: 100%;"
                     >
-                      Days
-                    </span>,
-                    "value": "DAYS",
-                  }
-                }
-                width={90}
-              />
+                      <fieldset
+                        class="Input_fieldset Input_fieldset___legend Input_fieldset___split"
+                      >
+                        <legend
+                          class="Input_legend Input_legend___focus"
+                        >
+                          File retention
+                        </legend>
+                        <div
+                          class="Input_wrapper input_hybrid_wrapper showInput"
+                          style="max-width: 10000px;"
+                        >
+                          <input
+                            class="Input form-control"
+                            id="file_retention_input"
+                            name="Input_file_retention"
+                            placeholder="File retention"
+                            type="number"
+                            value="40"
+                          />
+                        </div>
+                        <div
+                          class="Input_wrapper dropdown_hybrid_wrapper"
+                          style="width: 90px;"
+                        >
+                          <div
+                            class="Input Input__focus css-2b097c-container"
+                            id="DropdownInput_file_retention"
+                          >
+                            <div
+                              class="DropdownInput__controlContainer"
+                            >
+                              <div
+                                class="file_retention_dropdown__control css-1nr98fh-control"
+                              >
+                                <div
+                                  class="file_retention_dropdown__value-container file_retention_dropdown__value-container--has-value css-1hwfws3"
+                                >
+                                  <div
+                                    class="file_retention_dropdown__single-value css-1uccc91-singleValue"
+                                  >
+                                    <span
+                                      class="option_days"
+                                    >
+                                      Days
+                                    </span>
+                                  </div>
+                                  <input
+                                    class="css-62g3xt-dummyInput"
+                                    id="react-select-3-input"
+                                    readonly=""
+                                    tabindex="0"
+                                    value=""
+                                  />
+                                </div>
+                                <div
+                                  class="DropdownInput__indicatorsContainer"
+                                >
+                                  <div
+                                    class="file_retention_dropdown__indicators css-1hb7zxy-IndicatorsContainer"
+                                  >
+                                    <i
+                                      class="icon icon-chevron-down"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </CardBody>
-      </Card>
+        </div>
+        <div
+          class="admin-console-save"
+        >
+          <button
+            class="save-button btn"
+            data-testid="saveSetting"
+            disabled=""
+            id="saveSetting"
+            type="submit"
+          >
+            <span>
+              Save
+            </span>
+          </button>
+          <a
+            class="cancel-button"
+            href="/admin_console/compliance/data_retention_settings"
+          >
+            Cancel
+          </a>
+          
+        </div>
+      </div>
     </div>
-  </div>
-  <div
-    className="admin-console-save"
-  >
-    <SaveButton
-      btnClass="btn-primary"
-      defaultMessage={
-        <Memo(MemoizedFormattedMessage)
-          defaultMessage="Save"
-          id="admin.data_retention.custom_policy.save"
-        />
-      }
-      disabled={true}
-      extraClasses=""
-      onClick={[Function]}
-      saving={false}
-      savingMessage={
-        <Memo(MemoizedFormattedMessage)
-          defaultMessage="Saving"
-          id="save_button.saving"
-        />
-      }
-    />
-    <Connect(BlockableLink)
-      className="cancel-button"
-      to="/admin_console/compliance/data_retention_settings"
+  </body>,
+  "container": <div>
+    <div
+      class="wrapper--fixed DataRetentionSettings"
     >
-      <MemoizedFormattedMessage
-        defaultMessage="Cancel"
-        id="admin.data_retention.custom_policy.cancel"
-      />
-    </Connect(BlockableLink)>
-  </div>
-</div>
+      <div
+        class="admin-console__header with-back"
+      >
+        <div>
+          <a
+            class="fa fa-angle-left back"
+            href="/admin_console/compliance/data_retention_settings"
+          />
+          Global Retention Policy
+        </div>
+      </div>
+      <div
+        class="admin-console__wrapper"
+      >
+        <div
+          class="admin-console__content"
+        >
+          <div
+            class="Card console expanded"
+          >
+            <div
+              class="Card__body expanded expanding"
+              style="height: 0px;"
+            >
+              <div
+                class="global_policy"
+              >
+                <p>
+                  Applies to all teams and channels, but does not apply to custom retention policies.
+                </p>
+                <div
+                  id="global_direct_message_dropdown"
+                >
+                  <div
+                    class="DropdownInput hybrid_container"
+                    style="width: 100%;"
+                  >
+                    <fieldset
+                      class="Input_fieldset Input_fieldset___legend Input_fieldset___split"
+                    >
+                      <legend
+                        class="Input_legend Input_legend___focus"
+                      >
+                        Channel & direct message retention
+                      </legend>
+                      <div
+                        class="Input_wrapper input_hybrid_wrapper showInput"
+                        style="max-width: 10000px;"
+                      >
+                        <input
+                          class="Input form-control"
+                          id="channel_message_retention_input"
+                          name="Input_channel_message_retention"
+                          placeholder="Channel & direct message retention"
+                          type="number"
+                          value="60"
+                        />
+                      </div>
+                      <div
+                        class="Input_wrapper dropdown_hybrid_wrapper"
+                        style="width: 90px;"
+                      >
+                        <div
+                          class="Input Input__focus css-2b097c-container"
+                          id="DropdownInput_channel_message_retention"
+                        >
+                          <div
+                            class="DropdownInput__controlContainer"
+                          >
+                            <div
+                              class="channel_message_retention_dropdown__control css-1nr98fh-control"
+                            >
+                              <div
+                                class="channel_message_retention_dropdown__value-container channel_message_retention_dropdown__value-container--has-value css-1hwfws3"
+                              >
+                                <div
+                                  class="channel_message_retention_dropdown__single-value css-1uccc91-singleValue"
+                                >
+                                  <span
+                                    class="option_days"
+                                  >
+                                    Days
+                                  </span>
+                                </div>
+                                <input
+                                  class="css-62g3xt-dummyInput"
+                                  id="react-select-2-input"
+                                  readonly=""
+                                  tabindex="0"
+                                  value=""
+                                />
+                              </div>
+                              <div
+                                class="DropdownInput__indicatorsContainer"
+                              >
+                                <div
+                                  class="channel_message_retention_dropdown__indicators css-1hb7zxy-IndicatorsContainer"
+                                >
+                                  <i
+                                    class="icon icon-chevron-down"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+                <div
+                  id="global_file_dropdown"
+                >
+                  <div
+                    class="DropdownInput hybrid_container"
+                    style="width: 100%;"
+                  >
+                    <fieldset
+                      class="Input_fieldset Input_fieldset___legend Input_fieldset___split"
+                    >
+                      <legend
+                        class="Input_legend Input_legend___focus"
+                      >
+                        File retention
+                      </legend>
+                      <div
+                        class="Input_wrapper input_hybrid_wrapper showInput"
+                        style="max-width: 10000px;"
+                      >
+                        <input
+                          class="Input form-control"
+                          id="file_retention_input"
+                          name="Input_file_retention"
+                          placeholder="File retention"
+                          type="number"
+                          value="40"
+                        />
+                      </div>
+                      <div
+                        class="Input_wrapper dropdown_hybrid_wrapper"
+                        style="width: 90px;"
+                      >
+                        <div
+                          class="Input Input__focus css-2b097c-container"
+                          id="DropdownInput_file_retention"
+                        >
+                          <div
+                            class="DropdownInput__controlContainer"
+                          >
+                            <div
+                              class="file_retention_dropdown__control css-1nr98fh-control"
+                            >
+                              <div
+                                class="file_retention_dropdown__value-container file_retention_dropdown__value-container--has-value css-1hwfws3"
+                              >
+                                <div
+                                  class="file_retention_dropdown__single-value css-1uccc91-singleValue"
+                                >
+                                  <span
+                                    class="option_days"
+                                  >
+                                    Days
+                                  </span>
+                                </div>
+                                <input
+                                  class="css-62g3xt-dummyInput"
+                                  id="react-select-3-input"
+                                  readonly=""
+                                  tabindex="0"
+                                  value=""
+                                />
+                              </div>
+                              <div
+                                class="DropdownInput__indicatorsContainer"
+                              >
+                                <div
+                                  class="file_retention_dropdown__indicators css-1hb7zxy-IndicatorsContainer"
+                                >
+                                  <i
+                                    class="icon icon-chevron-down"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="admin-console-save"
+      >
+        <button
+          class="save-button btn"
+          data-testid="saveSetting"
+          disabled=""
+          id="saveSetting"
+          type="submit"
+        >
+          <span>
+            Save
+          </span>
+        </button>
+        <a
+          class="cancel-button"
+          href="/admin_console/compliance/data_retention_settings"
+        >
+          Cancel
+        </a>
+        
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

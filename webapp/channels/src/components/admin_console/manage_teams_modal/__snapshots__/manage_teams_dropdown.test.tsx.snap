@@ -1,149 +1,357 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ManageTeamsDropdown should match snapshot for guest 1`] = `
-<MenuWrapper
-  animationComponent={[Function]}
-  className=""
->
-  <a>
-    <span>
-      Guest
-       
-    </span>
-    <span
-      className="caret"
-    />
-  </a>
-  <Menu
-    ariaLabel="Change the role of a team member"
-    openLeft={true}
-  >
-    <MenuItemAction
-      onClick={[Function]}
-      show={false}
-      text="Make Team Admin"
-    />
-    <MenuItemAction
-      onClick={[Function]}
-      show={false}
-      text="Make Team Member"
-    />
-    <MenuItemAction
-      onClick={[Function]}
-      show={true}
-      text="Remove from Team"
-    />
-  </Menu>
-</MenuWrapper>
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MenuWrapper "
+      >
+        <a>
+          <span>
+            Guest
+             
+          </span>
+          <span
+            class="caret"
+          />
+        </a>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MenuWrapper "
+    >
+      <a>
+        <span>
+          Guest
+           
+        </span>
+        <span
+          class="caret"
+        />
+      </a>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`ManageTeamsDropdown should match snapshot for system admin 1`] = `
-<MenuWrapper
-  animationComponent={[Function]}
-  className=""
->
-  <a>
-    <span>
-      System Admin
-       
-    </span>
-    <span
-      className="caret"
-    />
-  </a>
-  <Menu
-    ariaLabel="Change the role of a team member"
-    openLeft={true}
-  >
-    <MenuItemAction
-      onClick={[Function]}
-      show={true}
-      text="Make Team Admin"
-    />
-    <MenuItemAction
-      onClick={[Function]}
-      show={false}
-      text="Make Team Member"
-    />
-    <MenuItemAction
-      onClick={[Function]}
-      show={true}
-      text="Remove from Team"
-    />
-  </Menu>
-</MenuWrapper>
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MenuWrapper "
+      >
+        <a>
+          <span>
+            System Admin
+             
+          </span>
+          <span
+            class="caret"
+          />
+        </a>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MenuWrapper "
+    >
+      <a>
+        <span>
+          System Admin
+           
+        </span>
+        <span
+          class="caret"
+        />
+      </a>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`ManageTeamsDropdown should match snapshot for team admin 1`] = `
-<MenuWrapper
-  animationComponent={[Function]}
-  className=""
->
-  <a>
-    <span>
-      Team Admin
-       
-    </span>
-    <span
-      className="caret"
-    />
-  </a>
-  <Menu
-    ariaLabel="Change the role of a team member"
-    openLeft={true}
-  >
-    <MenuItemAction
-      onClick={[Function]}
-      show={false}
-      text="Make Team Admin"
-    />
-    <MenuItemAction
-      onClick={[Function]}
-      show={true}
-      text="Make Team Member"
-    />
-    <MenuItemAction
-      onClick={[Function]}
-      show={true}
-      text="Remove from Team"
-    />
-  </Menu>
-</MenuWrapper>
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MenuWrapper "
+      >
+        <a>
+          <span>
+            Team Admin
+             
+          </span>
+          <span
+            class="caret"
+          />
+        </a>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MenuWrapper "
+    >
+      <a>
+        <span>
+          Team Admin
+           
+        </span>
+        <span
+          class="caret"
+        />
+      </a>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`ManageTeamsDropdown should match snapshot for team member 1`] = `
-<MenuWrapper
-  animationComponent={[Function]}
-  className=""
->
-  <a>
-    <span>
-      Team Member
-       
-    </span>
-    <span
-      className="caret"
-    />
-  </a>
-  <Menu
-    ariaLabel="Change the role of a team member"
-    openLeft={true}
-  >
-    <MenuItemAction
-      onClick={[Function]}
-      show={true}
-      text="Make Team Admin"
-    />
-    <MenuItemAction
-      onClick={[Function]}
-      show={false}
-      text="Make Team Member"
-    />
-    <MenuItemAction
-      onClick={[Function]}
-      show={true}
-      text="Remove from Team"
-    />
-  </Menu>
-</MenuWrapper>
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MenuWrapper "
+      >
+        <a>
+          <span>
+            Team Member
+             
+          </span>
+          <span
+            class="caret"
+          />
+        </a>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MenuWrapper "
+    >
+      <a>
+        <span>
+          Team Member
+           
+        </span>
+        <span
+          class="caret"
+        />
+      </a>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

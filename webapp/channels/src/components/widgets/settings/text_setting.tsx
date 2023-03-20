@@ -14,7 +14,7 @@ export type WidgetTextSettingProps = {
     placeholder?: string;
     helpText?: React.ReactNode;
     footer?: React.ReactNode;
-    value: string | number;
+    value?: string | number;
     inputClassName?: string;
     maxLength?: number;
     resizable?: boolean;

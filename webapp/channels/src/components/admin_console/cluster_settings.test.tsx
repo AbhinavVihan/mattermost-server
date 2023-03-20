@@ -2,9 +2,13 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 
 import ClusterSettings from 'components/admin_console/cluster_settings.jsx';
+import {renderWithIntl} from 'tests/react_testing_utils';
+import {screen} from '@testing-library/react';
+import {Provider} from 'react-redux';
+import {mockStore} from 'tests/test_store';
+import configureStore from 'store';
 
 describe('components/ClusterSettings', () => {
     const baseProps = {
@@ -13,6 +17,8 @@ describe('components/ClusterSettings', () => {
             Cluster: 'true',
         },
     };
+    const store = configureStore(mockStore);
+
     test('should match snapshot, encryption disabled', () => {
         const props = {
             ...baseProps,
@@ -30,15 +36,19 @@ describe('components/ClusterSettings', () => {
                 SteamingPort: 8075,
             },
         };
-        const wrapper = shallow(
-            <ClusterSettings
-                {...props}
-                config={config}
-            />,
+        const wrapper = renderWithIntl(
+            <Provider store={store}>
+                <ClusterSettings
+                    {...props}
+                    config={config}
+                />
+            </Provider>,
         );
         expect(wrapper).toMatchSnapshot();
 
-        expect(wrapper.find('#EnableExperimentalGossipEncryption').prop('value')).toBe(false);
+        expect(
+            screen.getByTestId('EnableExperimentalGossipEncryptionfalse'),
+        ).toBeChecked();
     });
 
     test('should match snapshot, encryption enabled', () => {
@@ -58,15 +68,19 @@ describe('components/ClusterSettings', () => {
                 SteamingPort: 8075,
             },
         };
-        const wrapper = shallow(
-            <ClusterSettings
-                {...props}
-                config={config}
-            />,
+        const wrapper = renderWithIntl(
+            <Provider store={store}>
+                <ClusterSettings
+                    {...props}
+                    config={config}
+                />
+            </Provider>,
         );
         expect(wrapper).toMatchSnapshot();
 
-        expect(wrapper.find('#EnableExperimentalGossipEncryption').prop('value')).toBe(true);
+        expect(
+            screen.getByTestId('EnableExperimentalGossipEncryptiontrue'),
+        ).toBeChecked();
     });
 
     test('should match snapshot, compression enabled', () => {
@@ -86,15 +100,17 @@ describe('components/ClusterSettings', () => {
                 SteamingPort: 8075,
             },
         };
-        const wrapper = shallow(
-            <ClusterSettings
-                {...props}
-                config={config}
-            />,
+        const wrapper = renderWithIntl(
+            <Provider store={store}>
+                <ClusterSettings
+                    {...props}
+                    config={config}
+                />
+            </Provider>,
         );
         expect(wrapper).toMatchSnapshot();
 
-        expect(wrapper.find('#EnableGossipCompression').prop('value')).toBe(true);
+        expect(screen.getByTestId('EnableGossipCompressiontrue')).toBeChecked();
     });
 
     test('should match snapshot, compression disabled', () => {
@@ -114,14 +130,18 @@ describe('components/ClusterSettings', () => {
                 SteamingPort: 8075,
             },
         };
-        const wrapper = shallow(
-            <ClusterSettings
-                {...props}
-                config={config}
-            />,
+        const wrapper = renderWithIntl(
+            <Provider store={store}>
+                <ClusterSettings
+                    {...props}
+                    config={config}
+                />
+            </Provider>,
         );
         expect(wrapper).toMatchSnapshot();
 
-        expect(wrapper.find('#EnableGossipCompression').prop('value')).toBe(false);
+        expect(
+            screen.getByTestId('EnableGossipCompressionfalse'),
+        ).toBeChecked();
     });
 });

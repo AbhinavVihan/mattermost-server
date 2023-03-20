@@ -139,6 +139,7 @@ State
                             'fa-caret-down')
                     }
                     onClick={this.toggleCollapse}
+                    data-testid='fa-caret-right-link'
                 />
             );
             extraClasses += ' has-children';
@@ -201,65 +202,69 @@ State
         const displayType = this.props.type.split('-')[1];
 
         return (
-            <tr className={'group-teams-and-channels-row' + extraClasses}>
-                <ConfirmModal
-                    show={this.state.showConfirmationModal}
-                    title={
-                        <FormattedMessage
-                            id='admin.group_settings.group_details.group_teams_and_channels_row.remove.confirm_header'
-                            defaultMessage='Remove Membership from the {name} {displayType}?'
-                            values={{name: this.props.name, displayType}}
+            <table>
+                <tbody>
+                    <tr className={'group-teams-and-channels-row' + extraClasses}>
+                        <ConfirmModal
+                            show={this.state.showConfirmationModal}
+                            title={
+                                <FormattedMessage
+                                    id='admin.group_settings.group_details.group_teams_and_channels_row.remove.confirm_header'
+                                    defaultMessage='Remove Membership from the {name} {displayType}?'
+                                    values={{name: this.props.name, displayType}}
+                                />
+                            }
+                            message={
+                                <FormattedMessage
+                                    id='admin.group_settings.group_details.group_teams_and_channels_row.remove.confirm_body'
+                                    defaultMessage='Removing this membership will prevent future users in this group from being added to the {name} {displayType}.'
+                                    values={{name: this.props.name, displayType}}
+                                />
+                            }
+                            confirmButtonText={
+                                <FormattedMessage
+                                    id='admin.group_settings.group_details.group_teams_and_channels_row.remove.confirm_button'
+                                    defaultMessage='Yes, Remove'
+                                />
+                            }
+                            onConfirm={this.removeItem}
+                            onCancel={() =>
+                                this.setState({showConfirmationModal: false})
+                            }
                         />
-                    }
-                    message={
-                        <FormattedMessage
-                            id='admin.group_settings.group_details.group_teams_and_channels_row.remove.confirm_body'
-                            defaultMessage='Removing this membership will prevent future users in this group from being added to the {name} {displayType}.'
-                            values={{name: this.props.name, displayType}}
-                        />
-                    }
-                    confirmButtonText={
-                        <FormattedMessage
-                            id='admin.group_settings.group_details.group_teams_and_channels_row.remove.confirm_button'
-                            defaultMessage='Yes, Remove'
-                        />
-                    }
-                    onConfirm={this.removeItem}
-                    onCancel={() =>
-                        this.setState({showConfirmationModal: false})
-                    }
-                />
-                <td>
-                    <span className='arrow-icon'>{arrowIcon}</span>
-                    {channelIcon}
-                    <span
-                        className={classNames({
-                            'name-no-arrow':
+                        <td>
+                            <span className='arrow-icon'>{arrowIcon}</span>
+                            {channelIcon}
+                            <span
+                                className={classNames({
+                                    'name-no-arrow':
                                 isNil(arrowIcon) && isNil(channelIcon),
-                        })}
-                    >
-                        {this.props.name}
-                    </span>
-                </td>
-                <td className='type'>{typeText}</td>
-                <td>{this.displayAssignedRolesDropdown()}</td>
-                <td className='text-right'>
-                    <button
-                        type='button'
-                        className='btn btn-link'
-                        onClick={() =>
-                            this.setState({showConfirmationModal: true})
-                        }
-                        data-testid={`${this.props.name}_groupsyncable_remove`}
-                        disabled={this.props.isDisabled}
-                    >
-                        <FormattedMessage
-                            id='admin.group_settings.group_details.group_teams_and_channels_row.remove'
-                            defaultMessage='Remove'
-                        />
-                    </button>
-                </td>
-            </tr>
+                                })}
+                            >
+                                {this.props.name}
+                            </span>
+                        </td>
+                        <td className='type'>{typeText}</td>
+                        <td>{this.displayAssignedRolesDropdown()}</td>
+                        <td className='text-right'>
+                            <button
+                                type='button'
+                                className='btn btn-link'
+                                onClick={() =>
+                                    this.setState({showConfirmationModal: true})
+                                }
+                                data-testid={`${this.props.name}_groupsyncable_remove`}
+                                disabled={this.props.isDisabled}
+                            >
+                                <FormattedMessage
+                                    id='admin.group_settings.group_details.group_teams_and_channels_row.remove'
+                                    defaultMessage='Remove'
+                                />
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         );
     };
 }

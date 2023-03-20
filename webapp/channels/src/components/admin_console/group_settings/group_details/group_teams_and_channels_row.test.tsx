@@ -1,10 +1,11 @@
 // Copyright (c) 2015-present Mattermost, Inc. All Rights Reserved.
 // See LICENSE.txt for license information.
 
-import {shallow} from 'enzyme';
 import React from 'react';
 
 import GroupTeamsAndChannelsRow from 'components/admin_console/group_settings/group_details/group_teams_and_channels_row';
+import {renderWithIntl} from 'tests/react_testing_utils';
+import {fireEvent, screen} from '@testing-library/react';
 
 describe('components/admin_console/group_settings/group_details/GroupTeamsAndChannelsRow', () => {
     for (const type of [
@@ -14,7 +15,7 @@ describe('components/admin_console/group_settings/group_details/GroupTeamsAndCha
         'private-channel',
     ]) {
         test('should match snapshot, for ' + type, () => {
-            const wrapper = shallow(
+            const wrapper = renderWithIntl(
                 <GroupTeamsAndChannelsRow
                     id='xxxxxxxxxxxxxxxxxxxxxxxxxx'
                     type={type}
@@ -30,7 +31,7 @@ describe('components/admin_console/group_settings/group_details/GroupTeamsAndCha
         });
     }
     test('should match snapshot, when has children', () => {
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <GroupTeamsAndChannelsRow
                 id='xxxxxxxxxxxxxxxxxxxxxxxxxx'
                 type='public-team'
@@ -46,7 +47,7 @@ describe('components/admin_console/group_settings/group_details/GroupTeamsAndCha
     });
 
     test('should match snapshot, when has children and is collapsed', () => {
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <GroupTeamsAndChannelsRow
                 id='xxxxxxxxxxxxxxxxxxxxxxxxxx'
                 type='public-team'
@@ -63,7 +64,7 @@ describe('components/admin_console/group_settings/group_details/GroupTeamsAndCha
 
     test('should call onToggleCollapse on caret click', () => {
         const onToggleCollapse = jest.fn();
-        const wrapper = shallow(
+        renderWithIntl(
             <GroupTeamsAndChannelsRow
                 id='xxxxxxxxxxxxxxxxxxxxxxxxxx'
                 type='public-team'
@@ -75,13 +76,15 @@ describe('components/admin_console/group_settings/group_details/GroupTeamsAndCha
                 onChangeRoles={jest.fn()}
             />,
         );
-        wrapper.find('.fa-caret-right').simulate('click');
+
+        fireEvent.click(screen.getByTestId('fa-caret-right-link'));
+
         expect(onToggleCollapse).toBeCalledWith('xxxxxxxxxxxxxxxxxxxxxxxxxx');
     });
 
-    test('should call onRemoveItem on remove link click', () => {
+    test('should call onRemoveItem on remove link click', async () => {
         const onRemoveItem = jest.fn();
-        const wrapper = shallow<GroupTeamsAndChannelsRow>(
+        renderWithIntl(
             <GroupTeamsAndChannelsRow
                 id='xxxxxxxxxxxxxxxxxxxxxxxxxx'
                 type='public-team'
@@ -93,13 +96,14 @@ describe('components/admin_console/group_settings/group_details/GroupTeamsAndCha
                 onChangeRoles={jest.fn()}
             />,
         );
-        wrapper.find('.btn-link').simulate('click');
-        expect(wrapper.instance().state.showConfirmationModal).toEqual(true);
-        wrapper.instance().removeItem();
+        const buttonRemove = screen.getByTestId('Test team with children_groupsyncable_remove');
+        fireEvent.click(buttonRemove);
+        const buttonRemoveConfirm = screen.queryByText('Yes, Remove');
+        expect(buttonRemoveConfirm).toBeInTheDocument();
+        fireEvent.click(buttonRemoveConfirm!);
         expect(onRemoveItem).toBeCalledWith(
             'xxxxxxxxxxxxxxxxxxxxxxxxxx',
             'public-team',
         );
-        expect(wrapper.instance().state.showConfirmationModal).toEqual(false);
     });
 });

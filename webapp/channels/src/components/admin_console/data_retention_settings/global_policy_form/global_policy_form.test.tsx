@@ -2,9 +2,12 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 
 import GlobalPolicyForm from 'components/admin_console/data_retention_settings/global_policy_form/global_policy_form';
+import {renderWithIntl} from 'tests/react_testing_utils';
+import {Provider} from 'react-redux';
+import store from 'stores/redux_store';
+import {BrowserRouter} from 'react-router-dom';
 
 describe('components/PluginManagement', () => {
     const defaultProps = {
@@ -25,7 +28,7 @@ describe('components/PluginManagement', () => {
 
     test('should match snapshot', () => {
         const props = {...defaultProps};
-        const wrapper = shallow(<GlobalPolicyForm {...props}/>);
+        const wrapper = renderWithIntl(<BrowserRouter><Provider store={store}><GlobalPolicyForm {...props}/></Provider></BrowserRouter>);
         expect(wrapper).toMatchSnapshot();
     });
 });
