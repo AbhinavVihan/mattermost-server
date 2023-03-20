@@ -2,11 +2,11 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 
 import {readAccess} from './types';
 
 import SystemRolePermissionDropdown from './system_role_permission_dropdown';
+import {renderWithIntl} from 'tests/react_testing_utils';
 
 describe('admin_console/system_role_permission_dropdown', () => {
     const props = {
@@ -21,7 +21,7 @@ describe('admin_console/system_role_permission_dropdown', () => {
     };
 
     test('should match snapshot', () => {
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <SystemRolePermissionDropdown
                 {...props}
             />);
@@ -30,7 +30,7 @@ describe('admin_console/system_role_permission_dropdown', () => {
     });
 
     test('should match snapshot with isDisabledTrue', () => {
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <SystemRolePermissionDropdown
                 {...props}
                 isDisabled={true}

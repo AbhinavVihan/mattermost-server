@@ -1,223 +1,225 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`admin_console/system_role_permission_dropdown should match snapshot 1`] = `
-<MenuWrapper
-  animationComponent={[Function]}
-  className=""
-  isDisabled={false}
->
-  <button
-    aria-expanded="true"
-    className="PermissionSectionDropdownButton dropdown-toggle theme"
-    id="systemRolePermissionDropdownenvironemnt"
-    type="button"
-  >
-    <div
-      className="PermissionSectionDropdownButton_text"
-    >
-      <MemoizedFormattedMessage
-        defaultMessage="Read only"
-        id="admin.permissions.system_role_permissions.read.title"
-      />
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MenuWrapper "
+      >
+        <button
+          aria-expanded="true"
+          class="PermissionSectionDropdownButton dropdown-toggle theme"
+          id="systemRolePermissionDropdownenvironemnt"
+          type="button"
+        >
+          <div
+            class="PermissionSectionDropdownButton_text"
+          >
+            Read only
+          </div>
+          <div
+            class="PermissionSectionDropdownButton_icon"
+          >
+            <i
+              class="fa fa-angle-down"
+              title="Dropdown Icon"
+            />
+          </div>
+        </button>
+      </div>
     </div>
+  </body>,
+  "container": <div>
     <div
-      className="PermissionSectionDropdownButton_icon"
+      class="MenuWrapper "
     >
-      <DropdownIcon />
+      <button
+        aria-expanded="true"
+        class="PermissionSectionDropdownButton dropdown-toggle theme"
+        id="systemRolePermissionDropdownenvironemnt"
+        type="button"
+      >
+        <div
+          class="PermissionSectionDropdownButton_text"
+        >
+          Read only
+        </div>
+        <div
+          class="PermissionSectionDropdownButton_icon"
+        >
+          <i
+            class="fa fa-angle-down"
+            title="Dropdown Icon"
+          />
+        </div>
+      </button>
     </div>
-  </button>
-  <Menu
-    ariaLabel="Change role access on a system console section"
-  >
-    <MenuItemAction
-      onClick={[Function]}
-      show={true}
-      text={
-        <div
-          className="PermissionSectionDropdownOptions"
-        >
-          <div
-            className="PermissionSectionDropdownOptions_label"
-          >
-            <Memo(MemoizedFormattedMessage)
-              defaultMessage="Can edit"
-              id="admin.permissions.system_role_permissions.write.title"
-            />
-          </div>
-          <div
-            className="PermissionSectionDropdownOptions_description"
-          >
-            <Memo(MemoizedFormattedMessage)
-              defaultMessage="Can add, edit and delete anything in this section."
-              id="admin.permissions.system_role_permissions.write.description"
-            />
-          </div>
-        </div>
-      }
-    />
-    <MenuItemAction
-      onClick={[Function]}
-      show={true}
-      text={
-        <div
-          className="PermissionSectionDropdownOptions"
-        >
-          <div
-            className="PermissionSectionDropdownOptions_label"
-          >
-            <Memo(MemoizedFormattedMessage)
-              defaultMessage="Read only"
-              id="admin.permissions.system_role_permissions.read.title"
-            />
-          </div>
-          <div
-            className="PermissionSectionDropdownOptions_description"
-          >
-            <Memo(MemoizedFormattedMessage)
-              defaultMessage="Can view this section but can't edit anything in it"
-              id="admin.permissions.system_role_permissions.read.description"
-            />
-          </div>
-        </div>
-      }
-    />
-    <MenuItemAction
-      onClick={[Function]}
-      show={true}
-      text={
-        <div
-          className="PermissionSectionDropdownOptions"
-        >
-          <div
-            className="PermissionSectionDropdownOptions_label"
-          >
-            <Memo(MemoizedFormattedMessage)
-              defaultMessage="No access"
-              id="admin.permissions.system_role_permissions.no_access.title"
-            />
-          </div>
-          <div
-            className="PermissionSectionDropdownOptions_description"
-          >
-            <Memo(MemoizedFormattedMessage)
-              defaultMessage="No access to this section and it will be hidden in the navigation."
-              id="admin.permissions.system_role_permissions.no_access.description"
-            />
-          </div>
-        </div>
-      }
-    />
-  </Menu>
-</MenuWrapper>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`admin_console/system_role_permission_dropdown should match snapshot with isDisabledTrue 1`] = `
-<MenuWrapper
-  animationComponent={[Function]}
-  className=""
-  isDisabled={true}
->
-  <button
-    aria-expanded="true"
-    className="PermissionSectionDropdownButton dropdown-toggle theme"
-    id="systemRolePermissionDropdownenvironemnt"
-    type="button"
-  >
-    <div
-      className="PermissionSectionDropdownButton_text"
-    >
-      <MemoizedFormattedMessage
-        defaultMessage="Read only"
-        id="admin.permissions.system_role_permissions.read.title"
-      />
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MenuWrapper "
+        disabled=""
+      >
+        <button
+          aria-expanded="true"
+          class="PermissionSectionDropdownButton dropdown-toggle theme"
+          id="systemRolePermissionDropdownenvironemnt"
+          type="button"
+        >
+          <div
+            class="PermissionSectionDropdownButton_text"
+          >
+            Read only
+          </div>
+          <div
+            class="PermissionSectionDropdownButton_icon"
+          >
+            <i
+              class="fa fa-angle-down"
+              title="Dropdown Icon"
+            />
+          </div>
+        </button>
+      </div>
     </div>
+  </body>,
+  "container": <div>
     <div
-      className="PermissionSectionDropdownButton_icon"
+      class="MenuWrapper "
+      disabled=""
     >
-      <DropdownIcon />
+      <button
+        aria-expanded="true"
+        class="PermissionSectionDropdownButton dropdown-toggle theme"
+        id="systemRolePermissionDropdownenvironemnt"
+        type="button"
+      >
+        <div
+          class="PermissionSectionDropdownButton_text"
+        >
+          Read only
+        </div>
+        <div
+          class="PermissionSectionDropdownButton_icon"
+        >
+          <i
+            class="fa fa-angle-down"
+            title="Dropdown Icon"
+          />
+        </div>
+      </button>
     </div>
-  </button>
-  <Menu
-    ariaLabel="Change role access on a system console section"
-  >
-    <MenuItemAction
-      onClick={[Function]}
-      show={true}
-      text={
-        <div
-          className="PermissionSectionDropdownOptions"
-        >
-          <div
-            className="PermissionSectionDropdownOptions_label"
-          >
-            <Memo(MemoizedFormattedMessage)
-              defaultMessage="Can edit"
-              id="admin.permissions.system_role_permissions.write.title"
-            />
-          </div>
-          <div
-            className="PermissionSectionDropdownOptions_description"
-          >
-            <Memo(MemoizedFormattedMessage)
-              defaultMessage="Can add, edit and delete anything in this section."
-              id="admin.permissions.system_role_permissions.write.description"
-            />
-          </div>
-        </div>
-      }
-    />
-    <MenuItemAction
-      onClick={[Function]}
-      show={true}
-      text={
-        <div
-          className="PermissionSectionDropdownOptions"
-        >
-          <div
-            className="PermissionSectionDropdownOptions_label"
-          >
-            <Memo(MemoizedFormattedMessage)
-              defaultMessage="Read only"
-              id="admin.permissions.system_role_permissions.read.title"
-            />
-          </div>
-          <div
-            className="PermissionSectionDropdownOptions_description"
-          >
-            <Memo(MemoizedFormattedMessage)
-              defaultMessage="Can view this section but can't edit anything in it"
-              id="admin.permissions.system_role_permissions.read.description"
-            />
-          </div>
-        </div>
-      }
-    />
-    <MenuItemAction
-      onClick={[Function]}
-      show={true}
-      text={
-        <div
-          className="PermissionSectionDropdownOptions"
-        >
-          <div
-            className="PermissionSectionDropdownOptions_label"
-          >
-            <Memo(MemoizedFormattedMessage)
-              defaultMessage="No access"
-              id="admin.permissions.system_role_permissions.no_access.title"
-            />
-          </div>
-          <div
-            className="PermissionSectionDropdownOptions_description"
-          >
-            <Memo(MemoizedFormattedMessage)
-              defaultMessage="No access to this section and it will be hidden in the navigation."
-              id="admin.permissions.system_role_permissions.no_access.description"
-            />
-          </div>
-        </div>
-      }
-    />
-  </Menu>
-</MenuWrapper>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

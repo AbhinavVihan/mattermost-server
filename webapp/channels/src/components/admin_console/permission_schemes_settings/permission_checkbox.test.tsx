@@ -2,27 +2,27 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 
 import PermissionCheckbox from 'components/admin_console/permission_schemes_settings/permission_checkbox';
+import {renderWithIntl} from 'tests/react_testing_utils';
 
 describe('components/admin_console/permission_schemes_settings/permission_checkbox', () => {
     test('should match snapshot on no value', () => {
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <PermissionCheckbox/>,
         );
         expect(wrapper).toMatchSnapshot();
     });
 
     test('should match snapshot on value "checked" and no id', () => {
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <PermissionCheckbox value='checked'/>,
         );
         expect(wrapper).toMatchSnapshot();
     });
 
     test('should match snapshot on value "checked"', () => {
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <PermissionCheckbox
                 value='checked'
                 id='uniqId-checked'
@@ -32,7 +32,7 @@ describe('components/admin_console/permission_schemes_settings/permission_checkb
     });
 
     test('should match snapshot on value "intermediate"', () => {
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <PermissionCheckbox
                 value='intermediate'
                 id='uniqId-checked'
@@ -42,7 +42,7 @@ describe('components/admin_console/permission_schemes_settings/permission_checkb
     });
 
     test('should match snapshot on other value', () => {
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <PermissionCheckbox
                 value='other'
                 id='uniqId-checked'

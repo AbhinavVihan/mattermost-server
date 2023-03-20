@@ -2,9 +2,10 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 
 import RemoveFromTeamButton from 'components/admin_console/manage_teams_modal/remove_from_team_button';
+import {renderWithIntl} from 'tests/react_testing_utils';
+import {fireEvent, screen} from '@testing-library/react';
 
 describe('RemoveFromTeamButton', () => {
     const baseProps = {
@@ -13,7 +14,7 @@ describe('RemoveFromTeamButton', () => {
     };
 
     test('should match snapshot init', () => {
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <RemoveFromTeamButton {...baseProps}/>,
         );
 
@@ -21,10 +22,10 @@ describe('RemoveFromTeamButton', () => {
     });
 
     test('should call handleRemoveUserFromTeam on button click', () => {
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <RemoveFromTeamButton {...baseProps}/>,
         );
-        wrapper.find('button').prop('onClick')!({preventDefault: jest.fn()} as unknown as React.MouseEvent);
+        fireEvent.click(screen.getByRole('button'));
         expect(baseProps.handleRemoveUserFromTeam).toHaveBeenCalledTimes(1);
     });
 });

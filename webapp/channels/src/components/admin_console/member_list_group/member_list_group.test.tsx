@@ -2,12 +2,12 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 import {range} from 'lodash';
 
 import {TestHelper} from '../../../utils/test_helper';
 
 import MemberListGroup from './member_list_group';
+import {renderWithIntl} from 'tests/react_testing_utils';
 
 describe('admin_console/team_channel_settings/group/GroupList', () => {
     const users = range(0, 15).map((i) => {
@@ -36,12 +36,12 @@ describe('admin_console/team_channel_settings/group/GroupList', () => {
     };
 
     test('should match snapshot with no members', () => {
-        const wrapper = shallow(<MemberListGroup {...baseProps}/>);
+        const wrapper = renderWithIntl(<MemberListGroup {...baseProps}/>);
         expect(wrapper).toMatchSnapshot();
     });
 
     test('should match snapshot with members', () => {
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <MemberListGroup
                 {...baseProps}
                 users={users}

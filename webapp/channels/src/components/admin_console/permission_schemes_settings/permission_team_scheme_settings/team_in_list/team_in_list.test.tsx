@@ -2,11 +2,11 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 
 import TeamInList
     from 'components/admin_console/permission_schemes_settings/permission_team_scheme_settings/team_in_list/team_in_list';
 import {TeamType} from '@mattermost/types/teams';
+import {renderWithIntl} from 'tests/react_testing_utils';
 
 describe('components/admin_console/permission_schemes_settings/permission_team_scheme_settings/team_in_list/team_in_list', () => {
     test('should match snapshot with team', () => {
@@ -32,7 +32,7 @@ describe('components/admin_console/permission_schemes_settings/permission_team_s
             onRemoveTeam: () => {},
         };
 
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <TeamInList {...props}/>,
         );
         expect(wrapper).toMatchSnapshot();
