@@ -2,7 +2,6 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {mount} from 'enzyme';
 import 'jest-styled-components';
 
 import {AppBinding} from '@mattermost/types/apps';
@@ -13,6 +12,7 @@ import {GlobalState} from 'types/store';
 import {AppBindingLocations} from 'mattermost-redux/constants/apps';
 
 import AppBar from './app_bar';
+import {render} from '@testing-library/react';
 
 const mockDispatch = jest.fn();
 let mockState: GlobalState;
@@ -118,7 +118,7 @@ describe('components/app_bar/app_bar', () => {
     ] as AppBinding[];
 
     test('should match snapshot on mount', async () => {
-        const wrapper = mount(
+        const wrapper = render(
             <AppBar/>,
         );
 
@@ -128,7 +128,7 @@ describe('components/app_bar/app_bar', () => {
     test('should match snapshot on mount when App Bar is disabled', async () => {
         mockState.entities.general.config.EnableAppBar = 'false';
 
-        const wrapper = mount(
+        const wrapper = render(
             <AppBar/>,
         );
 

@@ -1,173 +1,191 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/app_bar/app_bar should match snapshot on mount 1`] = `
-.c0:last-child,
+Object {
+  "asFragment": [Function],
+  "baseElement": .c0:last-child,
 .c0:first-child {
   display: none;
 }
 
-<AppBar>
-  <div
-    className="app-bar"
-  >
-    <AppBarPluginComponent
-      component={
-        Object {
-          "action": [MockFunction],
-          "icon": "fallback_component",
-          "id": "the_component_id",
-          "pluginId": "playbooks",
-          "tooltipText": "Playbooks Tooltip",
-        }
-      }
-      key="the_component_id"
-    >
-      <OverlayTrigger
-        defaultOverlayShown={false}
-        delayShow={400}
-        overlay={
-          <Tooltip
-            bsClass="tooltip"
-            id="pluginTooltip-app-bar-icon-playbooks"
-            placement="right"
-          >
-            <span>
-              Playbooks Tooltip
-            </span>
-          </Tooltip>
-        }
-        placement="left"
-        trigger={
-          Array [
-            "hover",
-            "focus",
-          ]
-        }
+<body>
+    <div>
+      <div
+        class="app-bar"
       >
-        <OverlayTrigger
-          defaultOverlayShown={false}
-          delayShow={400}
-          overlay={
-            <OverlayWrapper
-              bsClass="tooltip"
-              id="pluginTooltip-app-bar-icon-playbooks"
-              intl={null}
-              placement="right"
-            >
-              <span>
-                Playbooks Tooltip
-              </span>
-            </OverlayWrapper>
-          }
-          placement="left"
-          trigger={
-            Array [
-              "hover",
-              "focus",
-            ]
-          }
+        <div
+          class="app-bar__icon"
+          id="app-bar-icon-playbooks"
         >
           <div
-            className="app-bar__icon"
-            id="app-bar-icon-playbooks"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseOut={[Function]}
-            onMouseOver={[Function]}
+            class="app-bar__old-icon app-bar__icon-inner app-bar__icon-inner--centered"
           >
-            <div
-              className="app-bar__old-icon app-bar__icon-inner app-bar__icon-inner--centered"
-            >
-              fallback_component
-            </div>
+            fallback_component
           </div>
-        </OverlayTrigger>
-      </OverlayTrigger>
-    </AppBarPluginComponent>
-    <_StyledHr
-      className="app-bar__divider"
-      key="divider"
+        </div>
+        <hr
+          class="c0 app-bar__divider"
+        />
+        <div
+          aria-label="Create Subscription"
+          class="app-bar__icon"
+          id="app-bar-icon-com.mattermost.zendesk"
+        >
+          <div
+            class="app-bar__icon-inner"
+          >
+            <img />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": .c0:last-child,
+.c0:first-child {
+  display: none;
+}
+
+<div>
+    <div
+      class="app-bar"
     >
+      <div
+        class="app-bar__icon"
+        id="app-bar-icon-playbooks"
+      >
+        <div
+          class="app-bar__old-icon app-bar__icon-inner app-bar__icon-inner--centered"
+        >
+          fallback_component
+        </div>
+      </div>
       <hr
-        className="c0 app-bar__divider"
+        class="c0 app-bar__divider"
       />
-    </_StyledHr>
-    <AppBarBinding
-      binding={
-        Object {
-          "app_id": "com.mattermost.zendesk",
-          "label": "Create Subscription",
-        }
-      }
-      key="com.mattermost.zendesk_Create Subscription"
-    >
-      <OverlayTrigger
-        defaultOverlayShown={false}
-        delayShow={400}
-        overlay={
-          <Tooltip
-            bsClass="tooltip"
-            id="tooltip-app-bar-icon-com.mattermost.zendesk"
-            placement="right"
-          >
-            <span>
-              Create Subscription
-            </span>
-          </Tooltip>
-        }
-        placement="left"
-        trigger={
-          Array [
-            "hover",
-            "focus",
-          ]
-        }
+      <div
+        aria-label="Create Subscription"
+        class="app-bar__icon"
+        id="app-bar-icon-com.mattermost.zendesk"
       >
-        <OverlayTrigger
-          defaultOverlayShown={false}
-          delayShow={400}
-          overlay={
-            <OverlayWrapper
-              bsClass="tooltip"
-              id="tooltip-app-bar-icon-com.mattermost.zendesk"
-              intl={null}
-              placement="right"
-            >
-              <span>
-                Create Subscription
-              </span>
-            </OverlayWrapper>
-          }
-          placement="left"
-          trigger={
-            Array [
-              "hover",
-              "focus",
-            ]
-          }
+        <div
+          class="app-bar__icon-inner"
         >
-          <div
-            aria-label="Create Subscription"
-            className="app-bar__icon"
-            id="app-bar-icon-com.mattermost.zendesk"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseOut={[Function]}
-            onMouseOver={[Function]}
-          >
-            <div
-              className="app-bar__icon-inner"
-            >
-              <img />
-            </div>
-          </div>
-        </OverlayTrigger>
-      </OverlayTrigger>
-    </AppBarBinding>
-  </div>
-</AppBar>
+          <img />
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
-exports[`components/app_bar/app_bar should match snapshot on mount when App Bar is disabled 1`] = `<AppBar />`;
+exports[`components/app_bar/app_bar should match snapshot on mount when App Bar is disabled 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div />
+  </body>,
+  "container": <div />,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

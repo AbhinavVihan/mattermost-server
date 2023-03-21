@@ -3,12 +3,11 @@
 
 import React from 'react';
 
-import {mount} from 'enzyme';
-
 import {FileSizes} from 'utils/file_utils';
 
 import ShowThreeDaysLeftTrialModal from 'components/announcement_bar/show_tree_days_left_trial_modal/show_three_days_left_trial_modal';
 import {CloudProducts} from 'utils/constants';
+import {render} from '@testing-library/react';
 
 let mockState: any;
 const mockDispatch = jest.fn();
@@ -135,7 +134,7 @@ describe('components/sidebar/show_three_days_left_trial_modal', () => {
     });
 
     test('should show the modal when is cloud, free trial, admin, have not dimissed previously and there are less than 3 days in the trial, ', () => {
-        mount(
+        render(
             <ShowThreeDaysLeftTrialModal/>,
         );
         expect(mockDispatch).toHaveBeenCalledTimes(1);
@@ -157,7 +156,7 @@ describe('components/sidebar/show_three_days_left_trial_modal', () => {
             },
         };
 
-        mount(
+        render(
             <ShowThreeDaysLeftTrialModal/>,
         );
         expect(mockDispatch).toHaveBeenCalledTimes(0);
@@ -166,7 +165,7 @@ describe('components/sidebar/show_three_days_left_trial_modal', () => {
     test('should NOT show the modal when is not Cloud', () => {
         mockState = {...mockState, entities: {...mockState.entities, general: {...mockState.general, license: {Cloud: 'false'}}}};
 
-        mount(
+        render(
             <ShowThreeDaysLeftTrialModal/>,
         );
         expect(mockDispatch).toHaveBeenCalledTimes(0);
@@ -187,7 +186,7 @@ describe('components/sidebar/show_three_days_left_trial_modal', () => {
             },
         };
 
-        mount(
+        render(
             <ShowThreeDaysLeftTrialModal/>,
         );
         expect(mockDispatch).toHaveBeenCalledTimes(0);
@@ -214,7 +213,7 @@ describe('components/sidebar/show_three_days_left_trial_modal', () => {
                 },
             },
         };
-        mount(
+        render(
             <ShowThreeDaysLeftTrialModal/>,
         );
         expect(mockDispatch).toHaveBeenCalledTimes(0);
@@ -237,7 +236,7 @@ describe('components/sidebar/show_three_days_left_trial_modal', () => {
                 preferences: modalDismissedPreference,
             },
         };
-        mount(
+        render(
             <ShowThreeDaysLeftTrialModal/>,
         );
         expect(mockDispatch).toHaveBeenCalledTimes(0);

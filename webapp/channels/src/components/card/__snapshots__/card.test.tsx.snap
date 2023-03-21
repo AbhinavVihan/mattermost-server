@@ -1,159 +1,443 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/card/card should match snapshot 1`] = `
-<Card
-  expanded={false}
->
-  <div
-    className="Card"
-  >
-    <CardHeader
-      expanded={false}
-      key=".0"
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="Card"
+      >
+        <div
+          class="Card__header"
+        >
+          Header Test
+        </div>
+        <div
+          class="Card__body expanding"
+        >
+          Body Test
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="Card"
     >
       <div
-        className="Card__header"
+        class="Card__header"
       >
         Header Test
       </div>
-    </CardHeader>
-    <CardBody
-      expanded={false}
-      key=".1"
-    >
       <div
-        className="Card__body expanding"
-        onTransitionEnd={[Function]}
-        style={
-          Object {
-            "height": "",
-          }
-        }
+        class="Card__body expanding"
       >
         Body Test
       </div>
-    </CardBody>
-  </div>
-</Card>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`components/card/card should match snapshot when expanded 1`] = `
-<Card
-  expanded={true}
->
-  <div
-    className="Card expanded"
-  >
-    <CardHeader
-      expanded={true}
-      key=".0"
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="Card expanded"
+      >
+        <div
+          class="Card__header expanded"
+        >
+          Header Test
+          <hr
+            class="Card__hr"
+          />
+        </div>
+        <div
+          class="Card__body expanded expanding"
+          style="height: 0px;"
+        >
+          Body Test
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="Card expanded"
     >
       <div
-        className="Card__header expanded"
+        class="Card__header expanded"
       >
         Header Test
         <hr
-          className="Card__hr"
+          class="Card__hr"
         />
       </div>
-    </CardHeader>
-    <CardBody
-      expanded={true}
-      key=".1"
-    >
       <div
-        className="Card__body expanded expanding"
-        onTransitionEnd={[Function]}
-        style={
-          Object {
-            "height": 0,
-          }
-        }
+        class="Card__body expanded expanding"
+        style="height: 0px;"
       >
         Body Test
       </div>
-    </CardBody>
-  </div>
-</Card>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`components/card/card should match snapshot when using header content and a button 1`] = `
-<div
-  className="Card console expanded"
->
-  <CardHeader
-    expanded={true}
-    key=".0"
-  >
-    <TitleAndButtonCardHeader
-      body={
-        <div>
-          Hello!
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="Card console expanded"
+      >
+        <div
+          class="Card__header expanded"
+        >
+          <div>
+            <div
+              class="text-top"
+            >
+              Custom retention policies
+            </div>
+            <div
+              class="text-bottom"
+            >
+              Customize how long specific teams and channels will keep messages.
+            </div>
+          </div>
+          <button
+            class="btn btn-primary"
+          >
+            Add policy
+          </button>
+          <hr
+            class="Card__hr"
+          />
         </div>
-      }
-      buttonText={
-        <Memo(MemoizedFormattedMessage)
-          defaultMessage="Add policy"
-          id="admin.data_retention.customPolicies.addPolicy"
+        <div
+          class="Card__body expanded expanding"
+          style="height: 0px;"
+        >
+          Body Test
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="Card console expanded"
+    >
+      <div
+        class="Card__header expanded"
+      >
+        <div>
+          <div
+            class="text-top"
+          >
+            Custom retention policies
+          </div>
+          <div
+            class="text-bottom"
+          >
+            Customize how long specific teams and channels will keep messages.
+          </div>
+        </div>
+        <button
+          class="btn btn-primary"
+        >
+          Add policy
+        </button>
+        <hr
+          class="Card__hr"
         />
-      }
-      onClick={[Function]}
-      subtitle={
-        <Memo(MemoizedFormattedMessage)
-          defaultMessage="Customize how long specific teams and channels will keep messages."
-          id="admin.data_retention.customPolicies.subTitle"
-        />
-      }
-      title={
-        <Memo(MemoizedFormattedMessage)
-          defaultMessage="Custom retention policies"
-          id="admin.data_retention.customPolicies.title"
-        />
-      }
-    />
-  </CardHeader>
-  <CardBody
-    expanded={true}
-    key=".1"
-  >
-    Body Test
-  </CardBody>
-</div>
+      </div>
+      <div
+        class="Card__body expanded expanding"
+        style="height: 0px;"
+      >
+        Body Test
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`components/card/card should match snapshot when using header content and no button 1`] = `
-<div
-  className="Card console expanded"
->
-  <CardHeader
-    expanded={true}
-    key=".0"
-  >
-    <TitleAndButtonCardHeader
-      body={
-        <div>
-          Hello!
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="Card console expanded"
+      >
+        <div
+          class="Card__header expanded"
+        >
+          <div>
+            <div
+              class="text-top"
+            >
+              Custom retention policies
+            </div>
+            <div
+              class="text-bottom"
+            >
+              Customize how long specific teams and channels will keep messages.
+            </div>
+          </div>
+          <hr
+            class="Card__hr"
+          />
         </div>
-      }
-      subtitle={
-        <Memo(MemoizedFormattedMessage)
-          defaultMessage="Customize how long specific teams and channels will keep messages."
-          id="admin.data_retention.customPolicies.subTitle"
+        <div
+          class="Card__body expanded expanding"
+          style="height: 0px;"
+        >
+          Body Test
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="Card console expanded"
+    >
+      <div
+        class="Card__header expanded"
+      >
+        <div>
+          <div
+            class="text-top"
+          >
+            Custom retention policies
+          </div>
+          <div
+            class="text-bottom"
+          >
+            Customize how long specific teams and channels will keep messages.
+          </div>
+        </div>
+        <hr
+          class="Card__hr"
         />
-      }
-      title={
-        <Memo(MemoizedFormattedMessage)
-          defaultMessage="Custom retention policies"
-          id="admin.data_retention.customPolicies.title"
-        />
-      }
-    />
-  </CardHeader>
-  <CardBody
-    expanded={true}
-    key=".1"
-  >
-    Body Test
-  </CardBody>
-</div>
+      </div>
+      <div
+        class="Card__body expanded expanding"
+        style="height: 0px;"
+      >
+        Body Test
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;

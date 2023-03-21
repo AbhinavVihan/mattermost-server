@@ -2,11 +2,9 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
-
-import Menu from 'components/widgets/menu/menu';
 
 import CloseChannel from './close_channel';
+import {fireEvent, render, screen} from '@testing-library/react';
 
 describe('components/ChannelHeaderDropdown/MenuItem.CloseChannel', () => {
     const baseProps = {
@@ -17,7 +15,7 @@ describe('components/ChannelHeaderDropdown/MenuItem.CloseChannel', () => {
     };
 
     it('should match snapshot', () => {
-        const wrapper = shallow<CloseChannel>(<CloseChannel {...baseProps}/>);
+        const wrapper = render(<CloseChannel {...baseProps}/>);
         expect(wrapper).toMatchSnapshot();
     });
 
@@ -26,7 +24,7 @@ describe('components/ChannelHeaderDropdown/MenuItem.CloseChannel', () => {
             ...baseProps,
             isArchived: false,
         };
-        const wrapper = shallow<CloseChannel>(<CloseChannel {...props}/>);
+        const wrapper = render(<CloseChannel {...props}/>);
         expect(wrapper).toMatchSnapshot();
     });
 
@@ -38,8 +36,8 @@ describe('components/ChannelHeaderDropdown/MenuItem.CloseChannel', () => {
                 goToLastViewedChannel: jest.fn(),
             },
         };
-        const wrapper = shallow<CloseChannel>(<CloseChannel {...props}/>);
-        wrapper.find(Menu.ItemAction).simulate('click');
+        const wrapper = render(<CloseChannel {...props}/>);
+        fireEvent.click(screen.queryByText('Close Channel')!);
         expect(props.actions.goToLastViewedChannel).toHaveBeenCalled();
     });
 });

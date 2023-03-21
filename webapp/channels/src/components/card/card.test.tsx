@@ -3,10 +3,11 @@
 
 import React from 'react';
 import {FormattedMessage} from 'react-intl';
-import {mount, shallow} from 'enzyme';
 
 import Card from './card';
 import TitleAndButtonCardHeader from './title_and_button_card_header/title_and_button_card_header';
+import {render} from '@testing-library/react';
+import {renderWithIntl} from 'tests/react_testing_utils';
 
 describe('components/card/card', () => {
     const baseProps = {
@@ -31,7 +32,7 @@ describe('components/card/card', () => {
     };
 
     test('should match snapshot', () => {
-        const wrapper = mount(
+        const wrapper = render(
             <Card {...baseProps}>
                 <Card.Header>{'Header Test'}</Card.Header>
                 <Card.Body>{'Body Test'}</Card.Body>
@@ -47,7 +48,7 @@ describe('components/card/card', () => {
             expanded: true,
         };
 
-        const wrapper = mount(
+        const wrapper = render(
             <Card {...props}>
                 <Card.Header>{'Header Test'}</Card.Header>
                 <Card.Body>{'Body Test'}</Card.Body>
@@ -64,7 +65,7 @@ describe('components/card/card', () => {
             className: 'console',
         };
 
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <Card {...props}>
                 <Card.Header>
                     <TitleAndButtonCardHeader
@@ -96,7 +97,7 @@ describe('components/card/card', () => {
             ,
         };
 
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <Card {...props}>
                 <Card.Header>
                     <TitleAndButtonCardHeader
