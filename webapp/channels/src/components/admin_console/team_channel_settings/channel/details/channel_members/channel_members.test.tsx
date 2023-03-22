@@ -10,6 +10,9 @@ import {UserProfile} from '@mattermost/types/users';
 import {TestHelper} from '../../../../../../utils/test_helper';
 
 import ChannelMembers from './channel_members';
+import {renderWithIntl} from 'tests/react_testing_utils';
+import {Provider} from 'react-redux';
+import store from 'stores/redux_store';
 
 describe('admin_console/team_channel_settings/channel/ChannelMembers', () => {
     const user1: UserProfile = Object.assign(TestHelper.getUserMock({id: 'user-1'}));
@@ -50,21 +53,23 @@ describe('admin_console/team_channel_settings/channel/ChannelMembers', () => {
     };
 
     test('should match snapshot', () => {
-        const wrapper = shallow(
-            <ChannelMembers {...baseProps}/>,
+        const wrapper = renderWithIntl(
+            <Provider store={store}><ChannelMembers {...baseProps}/></Provider>,
         );
         expect(wrapper).toMatchSnapshot();
     });
 
     test('should match snapshot loading no users', () => {
-        const wrapper = shallow(
-            <ChannelMembers
-                {...baseProps}
-                users={[]}
-                channelMembers={{}}
-                totalCount={0}
-                loading={true}
-            />,
+        const wrapper = renderWithIntl(
+            <Provider store={store}>
+                <ChannelMembers
+                    {...baseProps}
+                    users={[]}
+                    channelMembers={{}}
+                    totalCount={0}
+                    loading={true}
+                />
+            </Provider>,
         );
         expect(wrapper).toMatchSnapshot();
     });

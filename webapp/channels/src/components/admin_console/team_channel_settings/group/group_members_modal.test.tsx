@@ -2,23 +2,26 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 
 import {TestHelper} from 'utils/test_helper';
 
 import GroupMembersModal from './group_members_modal';
+import {Provider} from 'react-redux';
+import store from 'stores/redux_store';
+import {renderWithIntl} from 'tests/react_testing_utils';
 
 describe('admin_console/team_channel_settings/group/GroupList', () => {
     test('should match snapshot while visible', () => {
         const group = TestHelper.getGroupMock({});
 
-        const wrapper = shallow(
-            <GroupMembersModal
-                group={group}
-                onExited={jest.fn()}
-            />,
+        const wrapper = renderWithIntl(
+            <Provider store={store}>
+                <GroupMembersModal
+                    group={group}
+                    onExited={jest.fn()}
+                />
+            </Provider>,
         );
-        wrapper.setState({show: true});
         expect(wrapper).toMatchSnapshot();
     });
 });
