@@ -2,9 +2,9 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 
 import Action from './action';
+import {renderWithIntl} from 'tests/react_testing_utils';
 
 describe('components/drafts/draft_actions/action', () => {
     const baseProps = {
@@ -16,7 +16,7 @@ describe('components/drafts/draft_actions/action', () => {
     };
 
     it('should match snapshot', () => {
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <Action
                 {...baseProps}
             />,

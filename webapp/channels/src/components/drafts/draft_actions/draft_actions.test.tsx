@@ -8,6 +8,7 @@ import {Provider} from 'react-redux';
 import mockStore from 'tests/test_store';
 
 import DraftActions from './draft_actions';
+import {renderWithIntl} from 'tests/react_testing_utils';
 
 describe('components/drafts/draft_actions', () => {
     const baseProps = {
@@ -21,7 +22,7 @@ describe('components/drafts/draft_actions', () => {
     it('should match snapshot', () => {
         const store = mockStore();
 
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <Provider store={store}>
                 <DraftActions
                     {...baseProps}

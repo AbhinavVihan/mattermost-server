@@ -2,7 +2,6 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 import {Provider} from 'react-redux';
 
 import mockStore from 'tests/test_store';
@@ -13,6 +12,7 @@ import {UserProfile} from '@mattermost/types/users';
 import Constants from 'utils/constants';
 
 import DraftTitle from './draft_title';
+import {renderWithIntl} from 'tests/react_testing_utils';
 
 describe('components/drafts/draft_actions', () => {
     const baseProps = {
@@ -22,13 +22,13 @@ describe('components/drafts/draft_actions', () => {
         selfDraft: false,
         teammate: {} as UserProfile,
         teammateId: '',
-        type: '' as 'channel' | 'thread',
+        type: 'channel' as 'channel' | 'thread',
     };
 
     it('should match snapshot', () => {
         const store = mockStore();
 
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <Provider store={store}>
                 <DraftTitle
                     {...baseProps}
@@ -46,7 +46,7 @@ describe('components/drafts/draft_actions', () => {
             selfDraft: true,
         };
 
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <Provider store={store}>
                 <DraftTitle
                     {...props}
@@ -64,7 +64,7 @@ describe('components/drafts/draft_actions', () => {
             channelType: Constants.PRIVATE_CHANNEL as Channel['type'],
         };
 
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <Provider store={store}>
                 <DraftTitle
                     {...props}
@@ -82,7 +82,7 @@ describe('components/drafts/draft_actions', () => {
             channelType: Constants.DM_CHANNEL as Channel['type'],
         };
 
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <Provider store={store}>
                 <DraftTitle
                     {...props}
@@ -105,7 +105,7 @@ describe('components/drafts/draft_actions', () => {
             } as UserProfile,
         };
 
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <Provider store={store}>
                 <DraftTitle
                     {...props}
@@ -123,7 +123,7 @@ describe('components/drafts/draft_actions', () => {
             channelType: Constants.GM_CHANNEL as Channel['type'],
         };
 
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <Provider store={store}>
                 <DraftTitle
                     {...props}
@@ -142,7 +142,7 @@ describe('components/drafts/draft_actions', () => {
             type: 'thread' as 'channel' | 'thread',
         };
 
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <Provider store={store}>
                 <DraftTitle
                     {...props}
@@ -161,7 +161,7 @@ describe('components/drafts/draft_actions', () => {
             type: 'channel' as 'channel' | 'thread',
         };
 
-        const wrapper = shallow(
+        const wrapper = renderWithIntl(
             <Provider store={store}>
                 <DraftTitle
                     {...props}

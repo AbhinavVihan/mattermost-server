@@ -1,11 +1,13 @@
 // Copyright (c) 2015-present Mattermost, Inc. All Rights Reserved.
 // See LICENSE.txt for license information.
 
-import {shallow} from 'enzyme';
 import React from 'react';
 
 import DotMenu from 'components/dot_menu/dot_menu';
 import {TestHelper} from 'utils/test_helper';
+import {renderWithIntl} from 'tests/react_testing_utils';
+import {Provider} from 'react-redux';
+import store from 'stores/redux_store';
 
 jest.mock('utils/utils', () => {
     return {
@@ -62,8 +64,8 @@ describe('components/dot_menu/DotMenu returning empty ("")', () => {
             showForwardPostNewLabel: false,
         };
 
-        const wrapper = shallow(
-            <DotMenu {...baseProps}/>,
+        const wrapper = renderWithIntl(
+            <Provider store={store}><DotMenu {...baseProps}/></Provider>,
         );
 
         expect(wrapper).toMatchSnapshot();

@@ -2,9 +2,9 @@
 // See LICENSE.txt for license information.
 
 import React, {ComponentType} from 'react';
-import {mount} from 'enzyme';
 
 import withGetCloudSubscription from './with_get_cloud_subscription';
+import {renderWithIntl} from 'tests/react_testing_utils';
 
 describe('/components/common/hocs/with_get_cloud_subcription', () => {
     let TestComponent: ComponentType;
@@ -21,7 +21,7 @@ describe('/components/common/hocs/with_get_cloud_subcription', () => {
 
         const getCloudSubscriptionSpy = jest.spyOn(actions, 'getCloudSubscription');
 
-        mount(
+        renderWithIntl(
             <EnhancedComponent
                 isCloud={true}
                 actions={actions}
@@ -41,7 +41,7 @@ describe('/components/common/hocs/with_get_cloud_subcription', () => {
 
         const getCloudSubscriptionSpy = jest.spyOn(actions, 'getCloudSubscription');
 
-        mount(
+        renderWithIntl(
             <EnhancedComponent
                 isCloud={false}
                 actions={actions}
@@ -61,7 +61,7 @@ describe('/components/common/hocs/with_get_cloud_subcription', () => {
 
         const getCloudSubscriptionSpy = jest.spyOn(actions, 'getCloudSubscription');
 
-        mount(
+        renderWithIntl(
             <EnhancedComponent
                 isCloud={true}
                 actions={actions}

@@ -1,90 +1,222 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/CommercialSupportModal should match snapshot 1`] = `
-<Modal
-  animation={true}
-  autoFocus={true}
-  backdrop={true}
-  bsClass="modal"
-  dialogClassName="a11y__modal more-modal more-direct-channels"
-  dialogComponentClass={[Function]}
-  enforceFocus={true}
-  id="commercialSupportModal"
-  keyboard={true}
-  manager={
-    ModalManager {
-      "add": [Function],
-      "containers": Array [],
-      "data": Array [],
-      "handleContainerOverflow": true,
-      "hideSiblingNodes": true,
-      "isTopModal": [Function],
-      "modals": Array [],
-      "remove": [Function],
-    }
-  }
-  onExited={[MockFunction]}
-  onHide={[Function]}
-  renderBackdrop={[Function]}
-  restoreFocus={true}
-  show={true}
->
-  <ModalHeader
-    bsClass="modal-header"
-    closeButton={true}
-    closeLabel="Close"
-  >
-    <ModalTitle
-      bsClass="modal-title"
-      componentClass="h4"
-    >
-      <MemoizedFormattedMessage
-        defaultMessage="Commercial Support"
-        id="commercial_support.title"
-      />
-    </ModalTitle>
-  </ModalHeader>
-  <ModalBody
-    bsClass="modal-body"
-    componentClass="div"
+Object {
+  "asFragment": [Function],
+  "baseElement": <body
+    class="modal-open"
+    style="padding-right: 0px;"
   >
     <div
-      className="CommercialSupportModal"
+      aria-hidden="true"
+    />
+    <div
+      role="dialog"
     >
-      <FormattedMarkdownMessage
-        defaultMessage="If you're experiencing issues, [submit a support ticket.](!{supportLink})
- 
-**Download Support Packet**
- 
-We recommend that you download additional environment details about your Mattermost environment to help with troubleshooting. Once downloaded, attach the packet to your support ticket to share with our Customer Support team."
-        id="commercial_support.description"
-        values={
-          Object {
-            "supportLink": "https://support.mattermost.com/hc/en-us/requests/new",
-          }
-        }
+      <div
+        class="fade modal-backdrop in"
       />
-      <a
-        className="btn btn-primary DownloadSupportPacket"
-        href="/api/v4/system/support_packet"
-        rel="noopener noreferrer"
+      <div
+        class="fade in modal"
+        id="commercialSupportModal"
+        role="dialog"
+        style="display: block; padding-right: 0px;"
+        tabindex="-1"
       >
-        <MemoizedFormattedMessage
-          defaultMessage="Download Support Packet"
-          id="commercial_support.download_support_packet"
-        />
-      </a>
-      <AlertBanner
-        message={
-          <FormattedMarkdownMessage
-            defaultMessage="Before downloading the support packet, set **Output Logs to File** to **true** and set **File Log Level** to **DEBUG** [here](!/admin_console/environment/logging)."
-            id="commercial_support.warning.banner"
-          />
-        }
-        mode="info"
-        onDismiss={[Function]}
-      />
+        <div
+          class="a11y__modal more-modal more-direct-channels modal-dialog"
+        >
+          <div
+            class="modal-content"
+            role="document"
+          >
+            <div
+              class="modal-header"
+            >
+              <button
+                aria-label="Close"
+                class="close"
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                >
+                  ×
+                </span>
+                <span
+                  class="sr-only"
+                >
+                  Close
+                </span>
+              </button>
+              <h4
+                class="modal-title"
+              >
+                Commercial Support
+              </h4>
+            </div>
+            <div
+              class="modal-body"
+            >
+              <div
+                class="CommercialSupportModal"
+              >
+                <span>
+                  If you're experiencing issues, 
+                  <a
+                    href="https://support.mattermost.com/hc/en-us/requests/new"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    submit a support ticket.
+                  </a>
+                  <br />
+                  <br />
+                  <strong>
+                    Download Support Packet
+                  </strong>
+                  <br />
+                  <br />
+                  We recommend that you download additional environment details about your Mattermost environment to help with troubleshooting. Once downloaded, attach the packet to your support ticket to share with our Customer Support team.
+                </span>
+                <a
+                  class="btn btn-primary DownloadSupportPacket"
+                  href="/api/v4/system/support_packet"
+                  rel="noopener noreferrer"
+                >
+                  Download Support Packet
+                </a>
+                <div
+                  class="AlertBanner info AlertBanner--sys"
+                >
+                  <div
+                    class="AlertBanner__icon"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="24"
+                      version="1.1"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="AlertBanner__body"
+                  >
+                    <div
+                      class=""
+                    >
+                      <span>
+                        Before downloading the support packet, set 
+                        <strong>
+                          Output Logs to File
+                        </strong>
+                         to 
+                        <strong>
+                          true
+                        </strong>
+                         and set 
+                        <strong>
+                          File Log Level
+                        </strong>
+                         to 
+                        <strong>
+                          DEBUG
+                        </strong>
+                         
+                        <a
+                          href="/admin_console/environment/logging"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          here
+                        </a>
+                        .
+                      </span>
+                    </div>
+                  </div>
+                  <button
+                    class="AlertBanner__closeButton"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="18"
+                      version="1.1"
+                      viewBox="0 0 24 24"
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </ModalBody>
-</Modal>
+  </body>,
+  "container": <div
+    aria-hidden="true"
+  />,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
