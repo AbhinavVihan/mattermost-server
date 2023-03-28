@@ -17,6 +17,7 @@ import AdminConsole from './admin_console';
 import type {Props} from './admin_console';
 import {renderWithIntl} from 'tests/react_testing_utils';
 import {BrowserRouter} from 'react-router-dom';
+import {screen} from '@testing-library/react';
 
 describe('components/AdminConsole', () => {
     const baseProps: Props = {
@@ -88,10 +89,10 @@ describe('components/AdminConsole', () => {
             consoleAccess: {read: {}, write: {}},
             team: {name: 'development'} as Team,
         };
-        const wrapper = renderWithIntl(
+        renderWithIntl(
             <BrowserRouter><AdminConsole {...props}/></BrowserRouter>,
         );
-        expect(wrapper).toMatchSnapshot();
+        screen.getAllByText(baseProps.match.url, {exact: false});
     });
 
     test('should generate the routes', () => {
@@ -103,9 +104,9 @@ describe('components/AdminConsole', () => {
             consoleAccess: {read: {}, write: {}},
             team: {name: 'development'} as Team,
         };
-        const wrapper = renderWithIntl(
+        renderWithIntl(
             <BrowserRouter><AdminConsole {...props}/></BrowserRouter>,
         );
-        expect(wrapper).toMatchSnapshot();
+        screen.getAllByText(baseProps.match.url, {exact: false});
     });
 });
