@@ -15,9 +15,18 @@ import * as Utils from 'utils/utils';
 
 import AdminConsole from './admin_console';
 import type {Props} from './admin_console';
-import {renderWithIntl} from 'tests/react_testing_utils';
+import {renderWithIntl, renderWithIntlAndStore} from 'tests/react_testing_utils';
 import {BrowserRouter} from 'react-router-dom';
 import {screen} from '@testing-library/react';
+
+jest.mock('react-router-dom', () => {
+    const originalModule = jest.requireActual('react-router-dom');
+
+    return {
+        ...originalModule,
+        Redirect: jest.fn(({to}) => `Redirect to=${to}`),
+    };
+});
 
 describe('components/AdminConsole', () => {
     const baseProps: Props = {
@@ -85,14 +94,15 @@ describe('components/AdminConsole', () => {
             ...baseProps,
             unauthorizedRoute: '/team-id/channels/town-square',
             isCurrentUserSystemAdmin: false,
-            currentUserHasAnAdminRole: false,
+            currentUserHasAnAdminRole: true,
             consoleAccess: {read: {}, write: {}},
             team: {name: 'development'} as Team,
         };
-        renderWithIntl(
-            <BrowserRouter><AdminConsole {...props}/></BrowserRouter>,
+        const wrapper = renderWithIntlAndStore(
+            <div id='root'><BrowserRouter><AdminConsole {...props}/></BrowserRouter></div>, {}
         );
         screen.getAllByText(baseProps.match.url, {exact: false});
+        expect(wrapper.container).toMatchSnapshot();
     });
 
     test('should generate the routes', () => {
@@ -100,13 +110,15 @@ describe('components/AdminConsole', () => {
             ...baseProps,
             unauthorizedRoute: '/team-id/channels/town-square',
             isCurrentUserSystemAdmin: true,
-            currentUserHasAnAdminRole: false,
+            currentUserHasAnAdminRole: true,
             consoleAccess: {read: {}, write: {}},
             team: {name: 'development'} as Team,
         };
-        renderWithIntl(
-            <BrowserRouter><AdminConsole {...props}/></BrowserRouter>,
+        const wrapper = renderWithIntlAndStore(
+            <div id='root'><BrowserRouter><AdminConsole {...props}/></BrowserRouter></div>, {}
         );
         screen.getAllByText(baseProps.match.url, {exact: false});
+        expect(wrapper.container).toMatchSnapshot();
+
     });
 });
