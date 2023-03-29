@@ -2,7 +2,6 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 
 import {Group} from '@mattermost/types/groups';
 import {Channel} from '@mattermost/types/channels';
@@ -10,6 +9,11 @@ import {Team} from '@mattermost/types/teams';
 import {Scheme} from '@mattermost/types/schemes';
 
 import ChannelDetails from './channel_details';
+import {renderWithIntl} from 'tests/react_testing_utils';
+import {Provider} from 'react-redux';
+import store from 'stores/redux_store';
+import {BrowserRouter} from 'react-router-dom';
+import {screen} from '@testing-library/react';
 
 describe('admin_console/team_channel_settings/channel/ChannelDetails', () => {
     test('should match snapshot', () => {
@@ -106,35 +110,43 @@ describe('admin_console/team_channel_settings/channel/ChannelDetails', () => {
             return;
         }
 
-        let wrapper = shallow(
-            <ChannelDetails
-                teamScheme={teamScheme}
-                groups={groups}
-                team={team}
-                totalGroups={groups.length}
-                actions={actions}
-                channel={testChannel}
-                channelID={testChannel.id}
-                allGroups={allGroups}
-                {...additionalProps}
-            />,
+        let wrapper = renderWithIntl(
+            <BrowserRouter>
+                <Provider store={store}>
+                    <ChannelDetails
+                        teamScheme={teamScheme}
+                        groups={groups}
+                        team={team}
+                        totalGroups={groups.length}
+                        actions={actions}
+                        channel={testChannel}
+                        channelID={testChannel.id}
+                        allGroups={allGroups}
+                        {...additionalProps}
+                    />
+                </Provider>
+            </BrowserRouter>,
         );
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.container).toMatchSnapshot();
 
-        wrapper = shallow(
-            <ChannelDetails
-                teamScheme={teamScheme}
-                groups={groups}
-                team={{}}
-                totalGroups={groups.length}
-                actions={actions}
-                channel={testChannel}
-                channelID={testChannel.id}
-                allGroups={allGroups}
-                {...additionalProps}
-            />,
+        wrapper = renderWithIntl(
+            <BrowserRouter>
+                <Provider store={store}>
+                    <ChannelDetails
+                        teamScheme={teamScheme}
+                        groups={groups}
+                        team={{}}
+                        totalGroups={groups.length}
+                        actions={actions}
+                        channel={testChannel}
+                        channelID={testChannel.id}
+                        allGroups={allGroups}
+                        {...additionalProps}
+                    />
+                </Provider>
+            </BrowserRouter>,
         );
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.container).toMatchSnapshot();
     });
     test('should match snapshot for Professional', () => {
         const groups: Group[] = [{
@@ -230,35 +242,43 @@ describe('admin_console/team_channel_settings/channel/ChannelDetails', () => {
             return;
         }
 
-        let wrapper = shallow(
-            <ChannelDetails
-                teamScheme={teamScheme}
-                groups={groups}
-                team={team}
-                totalGroups={groups.length}
-                actions={actions}
-                channel={testChannel}
-                channelID={testChannel.id}
-                allGroups={allGroups}
-                {...additionalProps}
-            />,
+        let wrapper = renderWithIntl(
+            <BrowserRouter>
+                <Provider store={store}>
+                    <ChannelDetails
+                        teamScheme={teamScheme}
+                        groups={groups}
+                        team={team}
+                        totalGroups={groups.length}
+                        actions={actions}
+                        channel={testChannel}
+                        channelID={testChannel.id}
+                        allGroups={allGroups}
+                        {...additionalProps}
+                    />
+                </Provider>
+            </BrowserRouter>,
         );
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.container).toMatchSnapshot();
 
-        wrapper = shallow(
-            <ChannelDetails
-                teamScheme={teamScheme}
-                groups={groups}
-                team={{}}
-                totalGroups={groups.length}
-                actions={actions}
-                channel={testChannel}
-                channelID={testChannel.id}
-                allGroups={allGroups}
-                {...additionalProps}
-            />,
+        wrapper = renderWithIntl(
+            <BrowserRouter>
+                <Provider store={store}>
+                    <ChannelDetails
+                        teamScheme={teamScheme}
+                        groups={groups}
+                        team={{}}
+                        totalGroups={groups.length}
+                        actions={actions}
+                        channel={testChannel}
+                        channelID={testChannel.id}
+                        allGroups={allGroups}
+                        {...additionalProps}
+                    />
+                </Provider>
+            </BrowserRouter>,
         );
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.container).toMatchSnapshot();
     });
 
     test('should match snapshot for Enterprise', () => {
@@ -355,34 +375,47 @@ describe('admin_console/team_channel_settings/channel/ChannelDetails', () => {
             return;
         }
 
-        let wrapper = shallow(
-            <ChannelDetails
-                teamScheme={teamScheme}
-                groups={groups}
-                team={team}
-                totalGroups={groups.length}
-                actions={actions}
-                channel={testChannel}
-                channelID={testChannel.id}
-                allGroups={allGroups}
-                {...additionalProps}
-            />,
+        let wrapper = renderWithIntl(
+            <BrowserRouter>
+                <Provider store={store}>
+                    <ChannelDetails
+                        teamScheme={teamScheme}
+                        groups={groups}
+                        team={team}
+                        totalGroups={groups.length}
+                        actions={actions}
+                        channel={testChannel}
+                        channelID={testChannel.id}
+                        allGroups={allGroups}
+                        {...additionalProps}
+                    />
+                </Provider>
+            </BrowserRouter>,
         );
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.container).toMatchSnapshot();
+        wrapper = renderWithIntl(
+            <BrowserRouter>
+                <Provider store={store}>
+                    <ChannelDetails
+                        teamScheme={teamScheme}
+                        groups={groups}
+                        team={{}}
+                        totalGroups={groups.length}
+                        actions={actions}
+                        channel={testChannel}
+                        channelID={testChannel.id}
+                        allGroups={allGroups}
+                        {...additionalProps}
+                    />
+                </Provider>
+            </BrowserRouter>,
+        );
 
-        wrapper = shallow(
-            <ChannelDetails
-                teamScheme={teamScheme}
-                groups={groups}
-                team={{}}
-                totalGroups={groups.length}
-                actions={actions}
-                channel={testChannel}
-                channelID={testChannel.id}
-                allGroups={allGroups}
-                {...additionalProps}
-            />,
-        );
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.getAllByTestId('saveSetting')[0]).toBeInTheDocument();
+        expect(screen.getAllByTestId('allow-all-toggle')[0]).toBeInTheDocument();
+        expect(screen.getAllByTestId('searchInput')[0]).toBeInTheDocument();
+        expect(screen.getAllByTestId('clear-search')[0]).toBeInTheDocument();
+
+        expect(wrapper.container).toMatchSnapshot();
     });
 });
