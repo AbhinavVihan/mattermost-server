@@ -11,7 +11,7 @@ describe('components/ColorSetting', () => {
     test('should match snapshot, all', () => {
         function emptyFunction() {} //eslint-disable-line no-empty-function
 
-        renderWithIntl(
+        const wrapper = renderWithIntl(
             <ColorSetting
                 id='id'
                 label='label'
@@ -23,12 +23,14 @@ describe('components/ColorSetting', () => {
         );
         expect(screen.getByText('helptext')).toBeInTheDocument();
         expect(screen.getByTestId('color-inputColorValue')).not.toBeDisabled();
+
+        expect(wrapper.container).toMatchSnapshot();
     });
 
     test('should match snapshot, no help text', () => {
         function emptyFunction() {} //eslint-disable-line no-empty-function
 
-        renderWithIntl(
+        const wrapper = renderWithIntl(
             <ColorSetting
                 id='id'
                 label='label'
@@ -38,12 +40,14 @@ describe('components/ColorSetting', () => {
             />,
         );
         expect(screen.queryByText('helptext')).not.toBeInTheDocument();
+
+        expect(wrapper.container).toMatchSnapshot();
     });
 
     test('should match snapshot, disabled', () => {
         function emptyFunction() {} //eslint-disable-line no-empty-function
 
-        renderWithIntl(
+        const wrapper = renderWithIntl(
             <ColorSetting
                 id='id'
                 label='label'
@@ -54,12 +58,14 @@ describe('components/ColorSetting', () => {
         );
         expect(screen.getByTestId('color-inputColorValue')).toBeDisabled();
         expect(screen.queryByText('helptext')).not.toBeInTheDocument();
+
+        expect(wrapper.container).toMatchSnapshot();
     });
 
     test('should match snapshot, clicked on color setting', () => {
         function emptyFunction() {} //eslint-disable-line no-empty-function
 
-        renderWithIntl(
+        const {container} = renderWithIntl(
             <ColorSetting
                 id='id'
                 label='label'
@@ -71,5 +77,7 @@ describe('components/ColorSetting', () => {
         );
         expect(screen.getByTestId('color-inputColorValue')).not.toBeDisabled();
         expect(screen.queryByText('helptext')).toBeInTheDocument();
+
+        expect(container).toMatchSnapshot();
     });
 });
