@@ -23,6 +23,7 @@ export default class PostDeletedModal extends React.PureComponent<Props, State> 
     }
 
     private handleHide = () => {
+        this.props.onExited();
         this.setState({show: false});
     }
 

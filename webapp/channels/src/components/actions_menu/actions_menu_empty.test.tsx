@@ -1,11 +1,11 @@
 // Copyright (c) 2015-present Mattermost, Inc. All Rights Reserved.
 // See LICENSE.txt for license information.
 
-import {shallow} from 'enzyme';
 import React from 'react';
 
 import ActionsMenu, {Props} from 'components/actions_menu/actions_menu';
 import {TestHelper} from 'utils/test_helper';
+import {renderWithIntl} from 'tests/react_testing_utils';
 
 jest.mock('utils/utils', () => {
     return {
@@ -47,10 +47,10 @@ describe('components/actions_menu/ActionsMenu returning empty ("")', () => {
             canOpenMarketplace: false,
         };
 
-        const wrapper = shallow(
+        const {container} = renderWithIntl(
             <ActionsMenu {...baseProps}/>,
         );
 
-        expect(wrapper).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });

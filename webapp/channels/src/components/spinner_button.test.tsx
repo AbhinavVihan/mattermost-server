@@ -2,33 +2,35 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {mount, shallow} from 'enzyme';
+
+import {fireEvent, screen} from '@testing-library/react';
 
 import SpinnerButton from 'components/spinner_button';
+import {renderWithIntl} from 'tests/react_testing_utils';
 
 describe('components/SpinnerButton', () => {
     test('should match snapshot with required props', () => {
-        const wrapper = shallow(
+        const {container} = renderWithIntl(
             <SpinnerButton
                 spinning={false}
                 spinningText='Test'
             />,
         );
-        expect(wrapper).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     test('should match snapshot with spinning', () => {
-        const wrapper = shallow(
+        const {container} = renderWithIntl(
             <SpinnerButton
                 spinning={true}
                 spinningText='Test'
             />,
         );
-        expect(wrapper).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     test('should match snapshot with children', () => {
-        const wrapper = shallow(
+        const {container} = renderWithIntl(
             <SpinnerButton
                 spinning={false}
                 spinningText='Test'
@@ -37,13 +39,13 @@ describe('components/SpinnerButton', () => {
                 <span id='child2'/>
             </SpinnerButton>,
         );
-        expect(wrapper).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     test('should handle onClick', () => {
         const onClick = jest.fn();
 
-        const wrapper = mount(
+        renderWithIntl(
             <SpinnerButton
                 spinning={false}
                 onClick={onClick}
@@ -51,12 +53,13 @@ describe('components/SpinnerButton', () => {
             />,
         );
 
-        wrapper.find('button').simulate('click');
+        fireEvent.click(screen.getByRole('button'));
+
         expect(onClick).toHaveBeenCalledTimes(1);
     });
 
     test('should add properties to underlying button', () => {
-        const wrapper = mount(
+        renderWithIntl(
             <SpinnerButton
                 id='my-button-id'
                 className='btn btn-success'
@@ -64,12 +67,12 @@ describe('components/SpinnerButton', () => {
             />,
         );
 
-        const button = wrapper.find('button');
+        const button = screen.getByRole('button');
 
         expect(button).not.toBeUndefined();
-        expect(button.type()).toEqual('button');
-        expect(button.props().id).toEqual('my-button-id');
-        expect(button.hasClass('btn')).toBeTruthy();
-        expect(button.hasClass('btn-success')).toBeTruthy();
+        expect(button.nodeName).toEqual('BUTTON');
+        expect(button.id).toEqual('my-button-id');
+        expect(button.classList.contains('btn')).toBeTruthy();
+        expect(button.classList.contains('btn-success')).toBeTruthy();
     });
 });

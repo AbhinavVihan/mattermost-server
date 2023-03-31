@@ -2,9 +2,10 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 
 import PostDeletedModal from 'components/post_deleted_modal';
+import {renderWithIntl} from 'tests/react_testing_utils';
+import {fireEvent, screen} from '@testing-library/react';
 
 describe('components/ChannelInfoModal', () => {
     const baseProps = {
@@ -12,10 +13,13 @@ describe('components/ChannelInfoModal', () => {
     };
 
     test('should match snapshot', () => {
-        const wrapper = shallow(
+        const {baseElement} = renderWithIntl(
             <PostDeletedModal {...baseProps}/>,
         );
 
-        expect(wrapper).toMatchSnapshot();
+        fireEvent.click(screen.getByTestId('postDeletedModalOkButton'));
+        expect(baseProps.onExited).toHaveBeenCalledTimes(1);
+
+        expect(baseElement).toMatchSnapshot();
     });
 });
