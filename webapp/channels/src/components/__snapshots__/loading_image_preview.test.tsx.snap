@@ -1,31 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/LoadingImagePreview should match snapshot 1`] = `
-<div
-  className="view-image__loading"
->
-  <LoadingSpinner
-    text={null}
-  />
-  <span
-    className="loader-percent"
+<div>
+  <div
+    class="view-image__loading"
   >
-    Loading 50%
-  </span>
+    <span
+      class="LoadingSpinner"
+      id="loadingSpinner"
+    >
+      <span
+        class="fa fa-spinner fa-fw fa-pulse spinner"
+        title="Loading Icon"
+      />
+    </span>
+    <span
+      class="loader-percent"
+      data-testid="loader-percent"
+    >
+      Loading 50%
+    </span>
+  </div>
 </div>
 `;
 
 exports[`components/LoadingImagePreview should match snapshot 2`] = `
-<div
-  className="view-image__loading"
->
-  <LoadingSpinner
-    text={null}
-  />
-  <span
-    className="loader-percent"
+<div>
+  <div
+    class="view-image__loading"
   >
-    Loading 90%
-  </span>
+    <span
+      class="LoadingSpinner"
+      id="loadingSpinner"
+    >
+      <span
+        class="fa fa-spinner fa-fw fa-pulse spinner"
+        title="Loading Icon"
+      />
+    </span>
+    <span
+      class="loader-percent"
+      data-testid="loader-percent"
+    >
+      Loading 50%
+    </span>
+  </div>
+</div>
+`;
+
+exports[`components/LoadingImagePreview should set the loading percent to 90 1`] = `
+<div>
+  <div
+    class="view-image__loading"
+  >
+    <span
+      class="LoadingSpinner"
+      id="loadingSpinner"
+    >
+      <span
+        class="fa fa-spinner fa-fw fa-pulse spinner"
+        title="Loading Icon"
+      />
+    </span>
+    <span
+      class="loader-percent"
+      data-testid="loader-percent"
+    >
+      Loading 90%
+    </span>
+  </div>
 </div>
 `;

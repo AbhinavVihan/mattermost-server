@@ -1,243 +1,286 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/GenericModal should match snapshot for base case 1`] = `
-<Modal
-  animation={true}
-  aria-labelledby="genericModalLabel"
-  autoFocus={true}
-  backdrop={true}
-  bsClass="modal"
-  dialogClassName="a11y__modal GenericModal"
-  dialogComponentClass={[Function]}
-  enforceFocus={true}
-  id="genericModal"
-  keyboard={true}
-  manager={
-    ModalManager {
-      "add": [Function],
-      "containers": Array [],
-      "data": Array [],
-      "handleContainerOverflow": true,
-      "hideSiblingNodes": true,
-      "isTopModal": [Function],
-      "modals": Array [],
-      "remove": [Function],
-    }
-  }
-  onExited={[MockFunction]}
-  onHide={[Function]}
-  onShow={[Function]}
-  renderBackdrop={[Function]}
-  restoreFocus={true}
-  role="dialog"
-  show={true}
+<body
+  class="modal-open"
+  style="padding-right: 0px;"
 >
-  <FocusTrap
-    active={false}
+  <div
+    aria-hidden="true"
+  />
+  <div
+    role="dialog"
   >
     <div
-      className="GenericModal__wrapper-enter-key-press-catcher"
-      onKeyDown={[Function]}
-      tabIndex={0}
+      class="fade modal-backdrop in"
+    />
+    <div
+      aria-labelledby="genericModalLabel"
+      class="fade in modal"
+      id="genericModal"
+      role="dialog"
+      style="display: block; padding-right: 0px;"
+      tabindex="-1"
     >
-      <ModalHeader
-        bsClass="modal-header"
-        closeButton={true}
-        closeLabel="Close"
-      />
-      <ModalBody
-        bsClass="modal-body"
-        componentClass="div"
+      <div
+        class="a11y__modal GenericModal modal-dialog"
       >
         <div
-          className="GenericModal__header"
+          class="modal-content"
+          role="document"
         >
-          <h1
-            id="genericModalLabel"
+          <div
+            data-testid="sentinelStart"
+            tabindex="-1"
+          />
+          <div
+            class="GenericModal__wrapper-enter-key-press-catcher"
+            tabindex="0"
           >
-            Modal Header Text
-          </h1>
+            <div
+              class="modal-header"
+            >
+              <button
+                aria-label="Close"
+                class="close"
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                >
+                  ×
+                </span>
+                <span
+                  class="sr-only"
+                >
+                  Close
+                </span>
+              </button>
+            </div>
+            <div
+              class="modal-body"
+            >
+              <div
+                class="GenericModal__header"
+              >
+                <h1
+                  id="genericModalLabel"
+                >
+                  Modal Header Text
+                </h1>
+              </div>
+              <div
+                class="GenericModal__body"
+              />
+            </div>
+          </div>
+          <div
+            data-testid="sentinelEnd"
+            tabindex="-1"
+          />
         </div>
-        <div
-          className="GenericModal__body"
-        />
-      </ModalBody>
+      </div>
     </div>
-  </FocusTrap>
-</Modal>
+  </div>
+</body>
 `;
 
 exports[`components/GenericModal should match snapshot with both buttons 1`] = `
-<Modal
-  animation={true}
-  aria-labelledby="genericModalLabel"
-  autoFocus={true}
-  backdrop={true}
-  bsClass="modal"
-  dialogClassName="a11y__modal GenericModal"
-  dialogComponentClass={[Function]}
-  enforceFocus={true}
-  id="genericModal"
-  keyboard={true}
-  manager={
-    ModalManager {
-      "add": [Function],
-      "containers": Array [],
-      "data": Array [],
-      "handleContainerOverflow": true,
-      "hideSiblingNodes": true,
-      "isTopModal": [Function],
-      "modals": Array [],
-      "remove": [Function],
-    }
-  }
-  onExited={[MockFunction]}
-  onHide={[Function]}
-  onShow={[Function]}
-  renderBackdrop={[Function]}
-  restoreFocus={true}
-  role="dialog"
-  show={true}
+<body
+  class="modal-open"
+  style="padding-right: 0px;"
 >
-  <FocusTrap
-    active={false}
+  <div
+    aria-hidden="true"
+  />
+  <div
+    role="dialog"
   >
     <div
-      className="GenericModal__wrapper-enter-key-press-catcher"
-      onKeyDown={[Function]}
-      tabIndex={0}
+      class="fade modal-backdrop in"
+    />
+    <div
+      aria-labelledby="genericModalLabel"
+      class="fade in modal"
+      id="genericModal"
+      role="dialog"
+      style="display: block; padding-right: 0px;"
+      tabindex="-1"
     >
-      <ModalHeader
-        bsClass="modal-header"
-        closeButton={true}
-        closeLabel="Close"
-      />
-      <ModalBody
-        bsClass="modal-body"
-        componentClass="div"
+      <div
+        class="a11y__modal GenericModal modal-dialog"
       >
         <div
-          className="GenericModal__header"
+          class="modal-content"
+          role="document"
         >
-          <h1
-            id="genericModalLabel"
+          <div
+            data-testid="sentinelStart"
+            tabindex="-1"
+          />
+          <div
+            class="GenericModal__wrapper-enter-key-press-catcher"
+            tabindex="0"
           >
-            Modal Header Text
-          </h1>
+            <div
+              class="modal-header"
+            >
+              <button
+                aria-label="Close"
+                class="close"
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                >
+                  ×
+                </span>
+                <span
+                  class="sr-only"
+                >
+                  Close
+                </span>
+              </button>
+            </div>
+            <div
+              class="modal-body"
+            >
+              <div
+                class="GenericModal__header"
+              >
+                <h1
+                  id="genericModalLabel"
+                >
+                  Modal Header Text
+                </h1>
+              </div>
+              <div
+                class="GenericModal__body"
+              />
+            </div>
+            <div
+              class="modal-footer"
+            >
+              <button
+                class="GenericModal__button cancel"
+                data-testid="GenericModal__button_cancel"
+                type="button"
+              >
+                Cancel
+              </button>
+              <button
+                class="GenericModal__button confirm"
+                data-testid="GenericModal__button_confirm"
+                type="submit"
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+          <div
+            data-testid="sentinelEnd"
+            tabindex="-1"
+          />
         </div>
-        <div
-          className="GenericModal__body"
-        />
-      </ModalBody>
-      <ModalFooter
-        bsClass="modal-footer"
-        componentClass="div"
-      >
-        <button
-          className="GenericModal__button cancel"
-          onClick={[Function]}
-          type="button"
-        >
-          <MemoizedFormattedMessage
-            defaultMessage="Cancel"
-            id="generic_modal.cancel"
-          />
-        </button>
-        <button
-          className="GenericModal__button confirm"
-          onClick={[Function]}
-          type="submit"
-        >
-          <MemoizedFormattedMessage
-            defaultMessage="Confirm"
-            id="generic_modal.confirm"
-          />
-        </button>
-      </ModalFooter>
+      </div>
     </div>
-  </FocusTrap>
-</Modal>
+  </div>
+</body>
 `;
 
 exports[`components/GenericModal should match snapshot with disabled confirm button 1`] = `
-<Modal
-  animation={true}
-  aria-labelledby="genericModalLabel"
-  autoFocus={true}
-  backdrop={true}
-  bsClass="modal"
-  dialogClassName="a11y__modal GenericModal"
-  dialogComponentClass={[Function]}
-  enforceFocus={true}
-  id="genericModal"
-  keyboard={true}
-  manager={
-    ModalManager {
-      "add": [Function],
-      "containers": Array [],
-      "data": Array [],
-      "handleContainerOverflow": true,
-      "hideSiblingNodes": true,
-      "isTopModal": [Function],
-      "modals": Array [],
-      "remove": [Function],
-    }
-  }
-  onExited={[MockFunction]}
-  onHide={[Function]}
-  onShow={[Function]}
-  renderBackdrop={[Function]}
-  restoreFocus={true}
-  role="dialog"
-  show={true}
+<body
+  class="modal-open"
+  style="padding-right: 0px;"
 >
-  <FocusTrap
-    active={false}
+  <div
+    aria-hidden="true"
+  />
+  <div
+    role="dialog"
   >
     <div
-      className="GenericModal__wrapper-enter-key-press-catcher"
-      onKeyDown={[Function]}
-      tabIndex={0}
+      class="fade modal-backdrop in"
+    />
+    <div
+      aria-labelledby="genericModalLabel"
+      class="fade in modal"
+      id="genericModal"
+      role="dialog"
+      style="display: block; padding-right: 0px;"
+      tabindex="-1"
     >
-      <ModalHeader
-        bsClass="modal-header"
-        closeButton={true}
-        closeLabel="Close"
-      />
-      <ModalBody
-        bsClass="modal-body"
-        componentClass="div"
+      <div
+        class="a11y__modal GenericModal modal-dialog"
       >
         <div
-          className="GenericModal__header"
+          class="modal-content"
+          role="document"
         >
-          <h1
-            id="genericModalLabel"
-          >
-            Modal Header Text
-          </h1>
-        </div>
-        <div
-          className="GenericModal__body"
-        />
-      </ModalBody>
-      <ModalFooter
-        bsClass="modal-footer"
-        componentClass="div"
-      >
-        <button
-          className="GenericModal__button confirm disabled"
-          disabled={true}
-          onClick={[Function]}
-          type="submit"
-        >
-          <MemoizedFormattedMessage
-            defaultMessage="Confirm"
-            id="generic_modal.confirm"
+          <div
+            data-testid="sentinelStart"
+            tabindex="-1"
           />
-        </button>
-      </ModalFooter>
+          <div
+            class="GenericModal__wrapper-enter-key-press-catcher"
+            tabindex="0"
+          >
+            <div
+              class="modal-header"
+            >
+              <button
+                aria-label="Close"
+                class="close"
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                >
+                  ×
+                </span>
+                <span
+                  class="sr-only"
+                >
+                  Close
+                </span>
+              </button>
+            </div>
+            <div
+              class="modal-body"
+            >
+              <div
+                class="GenericModal__header"
+              >
+                <h1
+                  id="genericModalLabel"
+                >
+                  Modal Header Text
+                </h1>
+              </div>
+              <div
+                class="GenericModal__body"
+              />
+            </div>
+            <div
+              class="modal-footer"
+            >
+              <button
+                class="GenericModal__button confirm disabled"
+                data-testid="GenericModal__button_confirm"
+                disabled=""
+                type="submit"
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+          <div
+            data-testid="sentinelEnd"
+            tabindex="-1"
+          />
+        </div>
+      </div>
     </div>
-  </FocusTrap>
-</Modal>
+  </div>
+</body>
 `;
