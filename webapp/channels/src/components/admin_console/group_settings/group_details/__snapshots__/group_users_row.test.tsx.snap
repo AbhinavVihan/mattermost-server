@@ -1,46 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/admin_console/group_settings/group_details/GroupUsersRow should match snapshot 1`] = `
-<div
-  className="group-users-row"
->
-  <Memo(Avatar)
-    size="lg"
-    url="/api/v4/users/xxxxxxxxxxxxxxxxxxxxxxxxxx/image"
-    username="test"
-  />
+<div>
   <div
-    className="user-data"
+    class="group-users-row"
   >
+    <img
+      alt="test profile image"
+      class="Avatar Avatar-lg"
+      loading="lazy"
+      src="/api/v4/users/xxxxxxxxxxxxxxxxxxxxxxxxxx/image"
+      tabindex="0"
+    />
     <div
-      className="name-row"
+      class="user-data"
     >
-      <span
-        className="username"
+      <div
+        class="name-row"
       >
-        @test
-      </span>
-      -
-      <span
-        className="display-name"
-      >
-        Test display name
-      </span>
-    </div>
-    <div>
-      <span
-        className="email-label"
-      >
-        <MemoizedFormattedMessage
-          defaultMessage="Email:"
-          id="admin.group_settings.group_details.group_users.email"
-        />
-      </span>
-      <span
-        className="email"
-      >
-        test@test.com
-      </span>
+        <span
+          class="username"
+        >
+          @test
+        </span>
+        -
+        <span
+          class="display-name"
+        >
+          Test display name
+        </span>
+      </div>
+      <div>
+        <span
+          class="email-label"
+        >
+          Email:
+        </span>
+        <span
+          class="email"
+        >
+          test@test.com
+        </span>
+      </div>
     </div>
   </div>
 </div>

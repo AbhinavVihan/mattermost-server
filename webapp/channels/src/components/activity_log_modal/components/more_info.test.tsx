@@ -2,12 +2,12 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 
 import {General} from 'mattermost-redux/constants';
 
 import MoreInfo from 'components/activity_log_modal/components/more_info';
 import {TestHelper} from 'utils/test_helper';
+import {renderWithIntl} from 'tests/react_testing_utils';
 
 describe('components/activity_log_modal/MoreInfo', () => {
     const baseProps = {
@@ -23,19 +23,19 @@ describe('components/activity_log_modal/MoreInfo', () => {
     };
 
     test('should match snapshot extra info toggled off', () => {
-        const wrapper = shallow(
+        const {container} = renderWithIntl(
             <MoreInfo {...baseProps}/>,
         );
 
-        expect(wrapper).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     test('should match snapshot, extra info toggled on', () => {
         const props = {...baseProps, moreInfo: true};
-        const wrapper = shallow(
+        const {container} = renderWithIntl(
             <MoreInfo {...props}/>,
         );
 
-        expect(wrapper).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 });
