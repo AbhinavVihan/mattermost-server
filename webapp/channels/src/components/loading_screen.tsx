@@ -22,6 +22,7 @@ function LoadingScreen({message, position = 'relative', style, className = '', c
                 'loading-screen--in-middle': centered,
             })}
             style={{position, ...style}}
+            data-testid='loading-screen'
         >
             <div className='loading__content'>
                 <p>

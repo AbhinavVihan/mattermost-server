@@ -174,6 +174,7 @@ const CloudStartTrialButton = ({
             className={`CloudStartTrialButton ${extraClass}`}
             onClick={startCloudTrial}
             disabled={disabled || status === TrialLoadStatus.Failed}
+            data-testid='start_cloud_trial_btn'
         >
             {btnText(status)}
         </button>

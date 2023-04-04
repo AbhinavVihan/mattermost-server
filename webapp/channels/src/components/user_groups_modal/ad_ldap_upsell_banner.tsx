@@ -115,6 +115,7 @@ function ADLDAPUpsellBanner() {
             <button
                 className='ad-ldap-banner-btn'
                 onClick={openSalesLink}
+                data-testid='contact-sales-btn'
             >
                 {formatMessage({id: 'adldap_upsell_banner.sales_btn', defaultMessage: 'Contact sales to use'})}
             </button>

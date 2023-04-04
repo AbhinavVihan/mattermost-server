@@ -50,6 +50,7 @@ const StartTrialBtn = ({
             className={btnClass}
             onClick={startTrial}
             disabled={disabled}
+            data-testid='start_trial_btn'
         >
             {btnText}
         </button>

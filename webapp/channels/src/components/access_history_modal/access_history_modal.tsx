@@ -36,6 +36,7 @@ export default class AccessHistoryModal extends React.PureComponent<Props, State
 
     public onHide = () => { // public for testing
         this.setState({show: false});
+        this.props.onHide();
     }
 
     public componentDidMount() {
