@@ -6,11 +6,14 @@ import React from 'react';
 import {PostType} from '@mattermost/types/posts';
 import {PluginComponent} from 'types/store/plugins';
 
-import {shallowWithIntl} from 'tests/helpers/intl-test-helper';
-
 import {TestHelper} from 'utils/test_helper';
 
 import ActionsMenu, {PLUGGABLE_COMPONENT, Props} from './actions_menu';
+import {renderWithIntl} from 'tests/react_testing_utils';
+import {screen} from '@testing-library/react';
+import {IntlProvider} from 'react-intl';
+import {Provider} from 'react-redux';
+import store from 'stores/redux_store';
 
 jest.mock('utils/utils', () => {
     const original = jest.requireActual('utils/utils');
@@ -25,6 +28,7 @@ const dropdownComponents: PluginComponent[] = [
         id: 'the_component_id',
         pluginId: 'playbooks',
         action: jest.fn(),
+        text: 'the_component_text',
     },
 ];
 
@@ -51,93 +55,148 @@ describe('components/actions_menu/ActionsMenu', () => {
     };
 
     test('sysadmin - should have divider when plugin menu item exists', () => {
-        const wrapper = shallowWithIntl(
-            <ActionsMenu {...baseProps}/>,
+        const {rerender} = renderWithIntl(
+            <Provider store={store}>
+                <ActionsMenu {...baseProps}/>
+            </Provider>,
         );
-        expect(wrapper.find('#divider_post_post_id_1_marketplace').exists()).toBe(false);
 
-        wrapper.setProps({
-            pluginMenuItems: dropdownComponents,
-            canOpenMarketplace: true,
-        });
-        expect(wrapper.find('#divider_post_post_id_1_marketplace').exists()).toBe(true);
+        expect(screen.queryByTestId('divider_post')).not.toBeInTheDocument();
+        rerender(<IntlProvider locale='en'>
+            <Provider store={store}>
+                <ActionsMenu
+                    {...baseProps}
+                    pluginMenuItems={dropdownComponents}
+                    canOpenMarketplace={true}
+                />
+            </Provider>
+        </IntlProvider>);
+        expect(screen.getByTestId('divider_post')).toBeInTheDocument();
     });
 
     test('has actions - marketplace enabled and user has SYSCONSOLE_WRITE_PLUGINS - should show actions and app marketplace', () => {
-        const wrapper = shallowWithIntl(
+        const {rerender} = renderWithIntl(
             <ActionsMenu {...baseProps}/>,
         );
-        wrapper.setProps({
-            pluginMenuItems: dropdownComponents,
-            canOpenMarketplace: true,
-        });
-        expect(wrapper).toMatchSnapshot();
+
+        expect(screen.queryByText('App Marketplace')).not.toBeInTheDocument();
+        rerender(<IntlProvider locale='en'>
+            <Provider store={store}>
+                <ActionsMenu
+                    {...baseProps}
+                    pluginMenuItems={dropdownComponents}
+                    canOpenMarketplace={true}
+                />
+            </Provider>
+        </IntlProvider>);
+
+        expect(screen.queryByText('App Marketplace')).toBeInTheDocument();
     });
 
     test('has actions - marketplace disabled or user not having SYSCONSOLE_WRITE_PLUGINS - should not show actions and app marketplace', () => {
-        const wrapper = shallowWithIntl(
+        const {rerender} = renderWithIntl(
             <ActionsMenu {...baseProps}/>,
         );
-        wrapper.setProps({
-            pluginMenuItems: dropdownComponents,
-            canOpenMarketplace: false,
-        });
-        expect(wrapper).toMatchSnapshot();
+        rerender(<IntlProvider locale='en'>
+            <Provider store={store}>
+                <ActionsMenu
+                    {...baseProps}
+                    pluginMenuItems={dropdownComponents}
+                    canOpenMarketplace={false}
+                />
+            </Provider>
+        </IntlProvider>);
+
+        expect(screen.queryByText('App Marketplace')).not.toBeInTheDocument();
     });
 
     test('no actions - sysadmin - menu should show visit marketplace', () => {
-        const wrapper = shallowWithIntl(
+        const {rerender} = renderWithIntl(
             <ActionsMenu {...baseProps}/>,
         );
 
-        wrapper.setProps({
-            canOpenMarketplace: true,
-        });
+        expect(screen.queryByTestId('divider_post')).not.toBeInTheDocument();
+        expect(screen.queryByText('App Marketplace')).not.toBeInTheDocument();
 
-        expect(wrapper).toMatchSnapshot();
+        rerender(<IntlProvider locale='en'>
+            <Provider store={store}>
+                <ActionsMenu
+                    {...baseProps}
+                    pluginMenuItems={dropdownComponents}
+                    canOpenMarketplace={true}
+                />
+            </Provider>
+        </IntlProvider>);
+
+        expect(screen.getByTestId('divider_post')).toBeInTheDocument();
+        expect(screen.queryByText('App Marketplace')).toBeInTheDocument();
     });
 
     test('no actions - end user - menu should not be visible to end user', () => {
-        const wrapper = shallowWithIntl(
+        const {rerender} = renderWithIntl(
             <ActionsMenu {...baseProps}/>,
         );
-        wrapper.setProps({
-            isSysAdmin: false,
-        });
+
+        rerender(<IntlProvider locale='en'>
+            <Provider store={store}>
+                <ActionsMenu
+                    {...baseProps}
+                    isSysAdmin={false}
+                />
+            </Provider>
+        </IntlProvider>);
 
         // menu should be empty
-        expect(wrapper.debug()).toMatchSnapshot();
+        expect(screen.queryByText('App Marketplace')).not.toBeInTheDocument();
+        expect(screen.queryByText('No Actions currently\nconfigured for this server')).not.toBeInTheDocument();
     });
 
     test('sysadmin - should have divider when pluggable menu item exists', () => {
-        const wrapper = shallowWithIntl(
+        const {rerender} = renderWithIntl(
             <ActionsMenu {...baseProps}/>,
         );
-        expect(wrapper.find('#divider_post_post_id_1_marketplace').exists()).toBe(false);
 
-        wrapper.setProps({
-            components: {
-                [PLUGGABLE_COMPONENT]: dropdownComponents,
-            },
-            canOpenMarketplace: true,
-        });
-        expect(wrapper.find('#divider_post_post_id_1_marketplace').exists()).toBe(true);
+        expect(screen.queryByTestId('divider_post')).not.toBeInTheDocument();
+        expect(screen.queryByText('App Marketplace')).not.toBeInTheDocument();
+
+        rerender(<IntlProvider locale='en'>
+            <Provider store={store}>
+                <ActionsMenu
+                    {...baseProps}
+                    canOpenMarketplace={true}
+                    components={{[PLUGGABLE_COMPONENT]: dropdownComponents}}
+                />
+            </Provider>
+        </IntlProvider>);
+
+        expect(screen.getByTestId('divider_post')).toBeInTheDocument();
+        expect(screen.queryByText('App Marketplace')).toBeInTheDocument();
     });
 
     test('end user - should not have divider when pluggable menu item exists', () => {
-        const wrapper = shallowWithIntl(
+        const {rerender} = renderWithIntl(
             <ActionsMenu {...baseProps}/>,
         );
-        wrapper.setProps({
-            isSysAdmin: false,
-        });
-        expect(wrapper.find('#divider_post_post_id_1_marketplace').exists()).toBe(false);
 
-        wrapper.setProps({
-            components: {
-                [PLUGGABLE_COMPONENT]: dropdownComponents,
-            },
-        });
-        expect(wrapper.find('#divider_post_post_id_1_marketplace').exists()).toBe(false);
+        rerender(<IntlProvider locale='en'>
+            <Provider store={store}>
+                <ActionsMenu
+                    {...baseProps}
+                    isSysAdmin={false}
+                />
+            </Provider>
+        </IntlProvider>);
+        expect(screen.queryByTestId('divider_post')).not.toBeInTheDocument();
+
+        rerender(<IntlProvider locale='en'>
+            <Provider store={store}>
+                <ActionsMenu
+                    {...baseProps}
+                    components={{[PLUGGABLE_COMPONENT]: dropdownComponents}}
+                />
+            </Provider>
+        </IntlProvider>);
+        expect(screen.getByLabelText('Post extra options')).toBeInTheDocument();
+        expect(screen.queryByTestId('divider_post')).not.toBeInTheDocument();
     });
 });

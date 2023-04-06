@@ -236,6 +236,7 @@ export class ActionMenuClass extends React.PureComponent<Props, State> {
                 id={`divider_post_${this.props.post.id}_${suffix}`}
                 className='MenuItem__divider'
                 role='menuitem'
+                data-testid='divider_post'
             />
         );
     };
