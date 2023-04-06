@@ -20,6 +20,7 @@ const AdminButtonOutline: React.FC<Props> = (props: Props) => {
             onClick={props.onClick}
             className={classNames('AdminButtonOutline', 'btn', props.className)}
             disabled={props.disabled}
+            data-testid='AdminButtonOutline-btn'
         >
             {props.children}
         </button>

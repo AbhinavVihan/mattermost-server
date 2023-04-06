@@ -2,38 +2,43 @@
 // See LICENSE.txt for license information.
 
 import React from 'react';
-import {shallow} from 'enzyme';
 
 import AdminButtonOutline from './admin_button_outline';
+import {renderWithIntl} from 'tests/react_testing_utils';
+import {screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 describe('components/admin_console/admin_button_outline/AdminButtonOutline', () => {
     test('should match snapshot with prop disable false', () => {
         const onClick = jest.fn();
-        const wrapper = shallow(
+        renderWithIntl(
             <AdminButtonOutline
                 onClick={onClick}
                 className='admin-btn-default'
                 disabled={false}
             />,
         );
-        expect(wrapper).toMatchSnapshot();
+
+        expect(screen.getByTestId('AdminButtonOutline-btn')).toHaveClass('admin-btn-default');
+        expect(screen.getByTestId('AdminButtonOutline-btn')).not.toBeDisabled();
     });
 
     test('should match snapshot with prop disable true', () => {
         const onClick = jest.fn();
-        const wrapper = shallow(
+        renderWithIntl(
             <AdminButtonOutline
                 onClick={onClick}
                 className='admin-btn-default'
                 disabled={true}
             />,
         );
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.getByTestId('AdminButtonOutline-btn')).toHaveClass('admin-btn-default');
+        expect(screen.getByTestId('AdminButtonOutline-btn')).toBeDisabled();
     });
 
     test('should match snapshot with children', () => {
         const onClick = jest.fn();
-        const wrapper = shallow(
+        renderWithIntl(
             <AdminButtonOutline
                 onClick={onClick}
                 className='admin-btn-default'
@@ -42,12 +47,14 @@ describe('components/admin_console/admin_button_outline/AdminButtonOutline', () 
                 {'Test children'}
             </AdminButtonOutline>,
         );
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.queryByText('Test children')).toBeInTheDocument();
+        expect(screen.getByTestId('AdminButtonOutline-btn')).toHaveClass('admin-btn-default');
+        expect(screen.getByTestId('AdminButtonOutline-btn')).toBeDisabled();
     });
 
     test('should match snapshot with className is not provided in scss file', () => {
         const onClick = jest.fn();
-        const wrapper = shallow(
+        renderWithIntl(
             <AdminButtonOutline
                 onClick={onClick}
                 className='btn-default'
@@ -56,22 +63,31 @@ describe('components/admin_console/admin_button_outline/AdminButtonOutline', () 
                 {'Test children'}
             </AdminButtonOutline>,
         );
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.queryByText('Test children')).toBeInTheDocument();
+        expect(screen.getByTestId('AdminButtonOutline-btn')).not.toHaveClass('admin-btn-default');
+        expect(screen.getByTestId('AdminButtonOutline-btn')).toHaveClass('btn-default');
+        expect(screen.getByTestId('AdminButtonOutline-btn')).toBeDisabled();
     });
 
     test('should handle onClick', () => {
         const onClick = jest.fn();
-        const wrapper = shallow(
+        renderWithIntl(
             <AdminButtonOutline
                 onClick={onClick}
                 className='admin-btn-default'
-                disabled={true}
+                disabled={false}
             >
                 {'Test children'}
             </AdminButtonOutline>,
         );
 
-        wrapper.find('button').simulate('click');
+        expect(screen.queryByText('Test children')).toBeInTheDocument();
+        expect(screen.getByTestId('AdminButtonOutline-btn')).toHaveClass('admin-btn-default');
+
+        //button should not be disabled for the clickEvent to happen
+        expect(screen.getByTestId('AdminButtonOutline-btn')).not.toBeDisabled();
+
+        userEvent.click(screen.getByTestId('AdminButtonOutline-btn'));
         expect(onClick).toHaveBeenCalledTimes(1);
     });
 });
