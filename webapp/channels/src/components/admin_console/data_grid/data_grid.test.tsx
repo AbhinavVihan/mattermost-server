@@ -5,6 +5,8 @@ import React from 'react';
 import {shallow} from 'enzyme';
 
 import DataGrid from './data_grid';
+import { renderWithIntl } from 'tests/react_testing_utils';
+import { screen } from '@testing-library/react';
 
 describe('components/admin_console/data_grid/DataGrid', () => {
     const baseProps = {
@@ -24,26 +26,28 @@ describe('components/admin_console/data_grid/DataGrid', () => {
     };
 
     test('should match snapshot with no items found', () => {
-        const wrapper = shallow(
+        renderWithIntl(
             <DataGrid
                 {...baseProps}
             />,
         );
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.queryByText('No items found')).toBeInTheDocument()
+        expect(screen.queryByText('Loading')).not.toBeInTheDocument()
     });
 
     test('should match snapshot while loading', () => {
-        const wrapper = shallow(
+        renderWithIntl(
             <DataGrid
                 {...baseProps}
                 loading={true}
             />,
         );
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.queryByText('No items found')).not.toBeInTheDocument()
+        expect(screen.queryByText('Loading')).toBeInTheDocument()
     });
 
     test('should match snapshot with content and custom styling on rows', () => {
-        const wrapper = shallow(
+        const {container} = renderWithIntl(
             <DataGrid
                 {...baseProps}
                 rows={[
@@ -57,11 +61,14 @@ describe('components/admin_console/data_grid/DataGrid', () => {
                 ]}
             />,
         );
-        expect(wrapper).toMatchSnapshot();
+
+        expect(container.firstChild).toHaveClass('DataGrid')
+        expect(screen.getAllByTestId('DataGrid_row')).toHaveLength(3)
+
     });
 
     test('should match snapshot with custom classes', () => {
-        const wrapper = shallow(
+        const {container} = renderWithIntl(
             <DataGrid
                 {...baseProps}
                 rows={[
@@ -76,6 +83,8 @@ describe('components/admin_console/data_grid/DataGrid', () => {
                 className={'customTable'}
             />,
         );
-        expect(wrapper).toMatchSnapshot();
+
+        expect(container.firstChild).toHaveClass('customTable')
+
     });
 });

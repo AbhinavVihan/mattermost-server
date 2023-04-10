@@ -43,6 +43,7 @@ class DataGridRow extends React.Component<Props> {
         const cells = this.props.columns.map((col) => this.renderCell(this.props.row, col));
         return (
             <div
+                data-testid='DataGrid_row'
                 className='DataGrid_row'
                 onClick={this.props.row.onClick}
             >
