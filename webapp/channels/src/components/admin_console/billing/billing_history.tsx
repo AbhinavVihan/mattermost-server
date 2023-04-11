@@ -39,7 +39,7 @@ export const NoBillingHistorySection = (props: NoBillingHistorySectionProps) => 
             />
         </div>
         <ExternalLink
-            data-testid='billingHistory-link'
+            data-testid='billingHistoryLink'
             location='billing_history'
             href={props.selfHosted ? HostedCustomerLinks.SELF_HOSTED_BILLING : CloudLinks.BILLING_DOCS}
             className='BillingHistory__noHistory-link'
@@ -86,7 +86,7 @@ const BillingHistory = () => {
                                     />
                                 </div>
                                 <div
-                                    data-testid='no-invoices'
+                                    data-testid='noInvoices'
                                     className='BillingHistory__cardHeaderText-bottom'
                                 >
                                     <FormattedMessage
